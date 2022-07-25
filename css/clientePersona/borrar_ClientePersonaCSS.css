@@ -1,0 +1,343 @@
+
+* { padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-decoration: none;
+    /*list-style: none;*/
+}
+
+/*-------------------- HEADER --------------------*/
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background:#ffff ;
+}
+
+/* HEADER SUPERIOR */
+.header__superior {
+    width: 50%;
+    height: 144px;
+    padding-top: 10px;
+    *background-color: plum;
+}
+
+.header__superior h1{
+    width: 100%;
+    height: 100%;
+    padding-left: 20px;
+    *background-color: aquamarine;
+}
+
+/* LOGO */
+.logo {
+    width: 50%;
+    height: 144px;
+    margin-top: -140px;;
+    margin-left: 50%;
+    padding-top: 3px;
+    align-items: center;
+    *justify-content: space-between;
+    *background-color: plum;
+}
+
+.logo img{
+    width: 15%; 
+    margin-left: 75%;
+} 
+
+
+/* BARRA MENU GENERAL*/
+.container__menu{
+    width: 100%; 
+    height: 70px; 
+    background: rgb(0, 147, 180);
+    padding: 0px 0px; /*arriba-abajo, izquerda-derecha*/
+    margin-top: -20px;
+}
+
+/* BARRA MENU*/
+.menu{
+    max-width: 1400px;
+    margin:auto;
+    height: 100%; 
+    margin-left: 0px;
+    *background: plum;
+}
+
+nav {
+    height: 100%;
+}
+
+
+nav > ul {              
+    height: 100%;
+    display: flex;      
+}
+
+
+/*MENU*/
+nav  ul  li{              
+    height: 100%;
+    list-style: none;      
+    position: relative;
+    *background:orange;
+    
+}
+
+nav > ul > li:first-child > a{  
+    background-image: url(../../imagenes/home.png);
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 20px 40px;
+}
+
+nav > ul > li:first-child:hover > a{  
+    background-image: url(../../imagenes/home.png);
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+nav > ul > li > a{              
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    color: aliceblue;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: all 100ms ease;
+    *background:orange;
+    
+}
+
+nav > ul > li > a:hover{ 
+    transform: scale(1.1); 
+    background: rgb(220, 150, 20);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+#selected {
+    transform: scale(1.1); 
+    *background-color: rgb(183, 206, 53);
+    background-color: rgb(230, 130, 20);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}   
+
+/* BARRA SUBMENU*/
+nav ul li ul{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 90px;
+    left: -5px;
+    padding: 14px 0px;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    z-index: 10; /*para que se mantenga arraiba de todo*/
+    transition: all 100ms ease;
+    *background:aquamarine;
+}
+
+nav ul li:hover ul{
+    visibility: visible;
+    opacity: 1; /*para que se vea*/
+    top: 70px;
+}
+
+nav ul li ul:before{
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid white;
+    position: absolute;
+    top: -12px;
+    left: 20px;
+}
+
+nav ul li ul li a{
+    display: block;
+    color: rgb(0, 147, 180);
+    padding: 6px;
+    padding-left: 14px;
+    margin-top: 10px;
+    font-size: 14px;
+    text-transform: capitalize;
+    transition: all 100ms ease;
+    *background:aquamarine;
+}
+
+nav ul li ul li a:hover{
+    background-color: rgb(159, 197, 58);
+    /*background: rgb(228, 181, 93);*/
+    transform:scale(1.2);
+    color: #ffff;
+    padding-left: 20px;
+    font-size: 14px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+
+/*-------------------- MAIN --------------------*/
+main{
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+/* SELECCIONAR PERSONA A ELIMINAR */
+
+.container__seleccionar_EliminarPersona{
+    width: 800px;
+    height: 250px;
+    margin-top: 198px;
+    padding-top: 40px;
+    align-items: center;
+    text-align: center;
+    *background-color: plum;
+    background-color: rgb(0, 147, 180);
+    
+}
+
+.container__seleccionar_EliminarPersona table{
+    padding: 10px;
+    *background-color: olive;
+    width: 800px;
+    align-items: center;
+    *display: flex;
+    *height: 80px;
+}
+
+.container__seleccionar_EliminarPersona h2{
+    color: rgb(159, 197, 58);
+    *background-color: burlywood;
+}
+
+.container__seleccionar_EliminarPersona table tr td{
+    align-items: center;
+    *background-color: aquamarine;
+    *display: flex;
+    *justify-content: space-between;
+    
+}
+
+.container__seleccionar_EliminarPersona table tr td select{
+    align-items: center;
+    width: 760px;
+    padding: 10px;
+    font-size: 16px; 
+    color: black;
+    font-weight: bolder;
+}
+
+
+.container__seleccionar_EliminarPersona table tr td select option{
+    font-size: 18px; 
+}
+
+.container__seleccionar_EliminarPersona table tr td input{
+    margin: 0px 40px;
+    margin-top: 15px;
+    padding: 10px;
+    align-items: center;
+    *background-color: aquamarine;
+    background-color:rgb(159, 197, 58); 
+    border-color:rgb(183, 206, 53);
+    color: white;
+    font-size: 20px; 
+    font-weight: bolder;
+    width: 260px;
+    height: 70px;
+}
+
+
+/* CONFIRMACION */
+.container__confirmacion_EliminarPersona{
+    width: 800px;
+    height: 308px;
+    align-items: center;
+    text-align: center;
+    *background-color:coral; 
+    background-color: rgb(0, 147, 180);
+}
+
+.container__confirmacion_EliminarPersona table{
+    width: 800px;
+    padding: 10px;
+    align-items: center;
+    *background-color:orange; 
+}
+
+
+.container__confirmacion_EliminarPersona h2{
+    margin-top: 10px;
+    font-size: 22px;
+    color: white;
+    *background-color: plum;
+}
+
+.container__confirmacion h2{
+    font-size: 22px;
+    margin-top: 10px;
+    color: white;
+    *background-color: plum;
+}
+
+.container__confirmacion_EliminarPersona h3{
+    font-size: 26px;
+    font-weight: bolder;
+    *color: rgb(159, 197, 58);
+    *margin-top: 10px;
+    color: red;
+}
+
+.container__confirmacion_EliminarPersona table tr td select{
+    margin-top: 20px;
+    padding: 10px;
+    padding-top: -40px;
+    width: 570px;
+    font-size: 24px; 
+    align-items: center;
+    text-align: center;
+    font-weight: bolder;
+    color: black;
+    *background-color:pink;
+}
+
+.container__confirmacion_EliminarPersona table tr td select option{
+    font-size: 24px; 
+    text-align: center
+    
+}
+
+.container__confirmacion_EliminarPersona table tr td input{
+    width: 260px;
+    height: 70px;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 22px; 
+    font-weight: bolder;
+    align-items: center;
+    *text-align: center;
+    color: white;
+    border-color:rgb(183, 206, 53);
+    background-color:rgb(159, 197, 58); 
+    *background-color:pink; 
+}
+
+
+
+
+
+

@@ -1,0 +1,301 @@
+
+* { padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-decoration: none;
+    /*list-style: none;*/
+}
+
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background:#ffff ;
+}
+
+.header__superior {
+    max-width: 1400px;
+    margin: auto;
+    margin-left: -10px;
+    margin-top: -16px;
+    margin-bottom: 0%;
+    display: flex; /*indica que se puede poner el Logo de un lado y el input de otro*/
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+
+}
+
+.search img{
+    width: 20%; /*250 px*/
+    margin-left: 85%;
+    padding: 0px;
+} 
+
+/*
+.search input{
+    width: 300px;
+    padding: 10px;
+}
+*/
+/* BARRA MENU*/
+.container__menu{
+    width: 100%; /*Para que ocupe todo el Ancho*/
+    height: 70px; /*Alto de la Barra de Menú*/
+    background: rgb(0, 147, 180);
+    padding: 0px 0px; /*arriba-abajo, izquerda-derecha*/
+    margin-top: -20px;
+}
+
+.menu{
+    max-width: 1400px;
+    margin:auto;
+    height: 100%; /*Se declara el 100% para despues poder posiconar respescto al tamaño del contenedor.*/
+    margin-left: 0px;
+}
+
+nav {
+    height: 100%;
+}
+
+nav > ul {              /* Representa al Menu, afecta solamente a los ul que derivan directamente de <nav>*/
+    height: 100%;
+    display: flex;      /*pone un elemento al lado del otro*/
+
+}
+
+nav  ul  li{              /* Representa los SubMenu*/
+    height: 100%;
+    list-style: none;      
+    position: relative;
+    
+}
+
+nav > ul > li:first-child > a{  
+    background-image: url(../../imagenes/home.png);
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 20px 40px;
+}
+
+nav > ul > li:first-child:hover > a{  
+    background-image: url(../../imagenes/home.png);
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+nav > ul > li > a{              /* Representa los SubMenu*/
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    color: aliceblue;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: all 100ms ease;
+    
+}
+
+nav > ul > li > a:hover{ 
+    transform: scale(1.1); /*Agranda levemente la opcion cuando se pasa el mouse*/
+    background: rgb(220, 150, 20);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+#selected {
+    transform: scale(1.1); 
+    *background-color: rgb(183, 206, 53);
+    background-color: rgb(230, 130, 20);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+
+}/*A medida que se vata cambiando de Página hay que ir cambiando el 'selected'*/
+
+/* BARRA SUBMENU (Cargar - Editar - etc)*/
+
+nav ul li ul{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 90px;
+    left: -5px;
+    padding: 14px 0px;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    z-index: 10; /*para que se mantenga arraiba de todo*/
+    transition: all 100ms ease;
+}
+
+nav ul li:hover ul{
+    visibility: visible;
+    opacity: 1; /*para que se vea*/
+    top: 70px;
+
+}
+
+nav ul li ul:before{
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid white;
+    position: absolute;
+    top: -12px;
+    left: 20px;
+}
+
+nav ul li ul li a{
+    display: block;
+    color: rgb(0, 147, 180);
+    padding: 6px;
+    padding-left: 14px;
+    margin-top: 10px;
+    font-size: 14px;
+    text-transform: capitalize;
+    transition: all 100ms ease;
+}
+
+nav ul li ul li a:hover{
+    background-color: rgb(159, 197, 58);
+    /*background: rgb(228, 181, 93);*/
+    transform:scale(1.2);
+    color: #ffff;
+    padding-left: 20px;
+    font-size: 14px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+/*MAIN CARGAR PERSONAS*/
+.container__main_CargarPersona{
+    width: 430px;
+    height: 558px;
+    margin-left: 0px;
+    padding-top: 0px;
+    padding-left: 10px;
+    align-items: center;
+    text-align: left;
+    color: white;
+    *background-color: plum;
+    background-color: rgb(0, 147, 180);
+}
+
+
+.container__main_CargarPersona td {
+    font-size: 16px;
+    margin-right: 10px;
+    *font-style: italic;
+    font-weight: bolder;
+    
+}
+
+.container__main_CargarPersona input{
+    width: 298px;
+    height: 30px;
+    padding: 7px;
+    margin: 0.5px 5px;
+    font-size: 18px;
+    *font-weight: bolder;
+    *background-color: plum;
+}
+.container__main_CargarPersona select{
+    
+    width: 298px; 
+    padding: 5px; 
+    font-weight: bolder;
+    margin: 1px 5px;
+    *font-size: 18px;
+    
+}
+
+.container__main_CargarPersona h2 {
+    width: 100%; 
+    text-align: center; 
+    font-size: 20px;
+    margin-bottom: 0px;
+    font-weight: bolder;
+    margin-left: -5px;
+    
+}
+
+.container__main_CargarPersona h3 {
+    width: 100%; 
+    text-align: center; 
+    color: white;
+    font-size: 16px;
+    *font-style: italic;
+    font-weight: bolder;
+    margin-left: -5px;
+    
+}
+
+.container__main_CargarPersona p{
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.container__main_CargarPersona table tr td select option{
+    font-size: 18px; 
+    
+}
+
+
+/* TABLA CARGAR PERSONAS*/
+.tabla_CargarPersonas{
+    width: 1010px;
+    height: 558px;
+    margin-left: 430px;
+    margin-top: -558px;
+    background-color: white;
+    *background-color: coral;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    padding-top: 5px;
+
+}
+
+.tabla_CargarPersonas table{
+    width: 2550px;
+    *height: 490px;
+    color: rgb(0, 147, 180);
+    text-align: center;
+    background-color: white;
+    *background-color: coral;
+    padding: 5px 5px; /*arriba-abajo, izquerda-derecha*/
+    padding-right: 2px;
+    margin-top: 0;
+    
+}
+
+.tabla_CargarPersonas table tr th{
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 18px;
+    padding-top: 2px;
+    *padding: 5px;
+    margin-top: 0;
+    color:rgb(159, 197, 58);
+ 
+}
+
+.tabla_CargarPersonas table tr td{
+    text-transform: capitalize;
+    text-align: center;
+    padding: 4px 0px;
+    
+}
+
+
+
+
+

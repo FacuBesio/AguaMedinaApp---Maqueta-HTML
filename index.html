@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AguaMedina - Home</title>
+        <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+    <!-- CSS -->
+        <link rel="stylesheet" href="css/indexCSS.css">
+    <!-- GoogleFonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,
+        300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    </head>
+    
+    
+    <body>
+        <!---------------------------------------- HEADER ---------------------------------------->
+        <header>
+
+            <!-- HEADER SUPERIOR -->
+            <div class="header__superior">
+                <!-- LOGO -->
+                <div class="logo">
+                    <img src="imagenes/logoAguaMedina.png" alt="">
+                </div>
+                <!-- SEARCH -->
+                <div class="search">
+                    <!--  <input type="search" placeholder="¿Qué deseas buscar?">-->
+                    <h1 style="color: rgb(183, 206, 52)">
+                        <strong style="font-weight: 900; color:rgb(0, 147, 180);">Agua</strong>Medina<strong style="font-weight: 800; color:rgb(220, 150, 20);">App</strong>                                                                                
+                    </h1>
+                </div>
+            </div>
+
+            <!-- HEADER CONTAINER MENU -->
+            <div class="container__menu"> <!-- Representa la línea horizontal entera -->
+                <!-- MENU -->
+                <div class="menu"> <!-- Representa al Menú sobre la línea horizontal entera -->
+                    <input type="checkbox" id="check__menu">
+                    <label id="#label__check" for="check__menu">
+                        <i class="fa-solid fa-bars icon__menu"></i>
+                    </label>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html" style="background-color: rgb(183, 206, 53);" id="selected">     </a>
+                            </li>
+                            
+                            <li><a href="recorridos/recorridos_Home.html">Recorridos           </a>
+                                <ul>
+                                    <li><a href="recorridos/cargar_Recorridos.html">Cargar Recorridos</a></li>
+                                    <li><a href="recorridos/editar_Recorridos.html">Editar Recorridos</a></li>
+                                    <li><a href="recorridos/borrar_Recorridos.html">Borrar Recorridos</a></li>
+                                    <li><a href="recorridos/buscar_Recorridos.html">Buscar Recorridos</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li><a href="clientesPersona/Home_ClientesPersona.html">Personas</a>
+                                <ul>
+                                    <li><a href="clientesPersona/cargar_ClientesPersona.html">Cargar Personas</a></li>
+                                    <li><a href="clientesPersona/editar_ClientesPersona.html">Editar Personas</a></li>
+                                    <li><a href="clientesPersona/borrar_ClientesPersona.html">Borrar Personas</a></li>
+                                    <li><a href="clientesPersona/buscar_ClientesPersona.html">Buscar Personas</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li><a href="clientesEmpresa/clientesEmpresa_Home.html">Empresas</a>
+                                <ul>
+                                    <li><a href="clientesEmpresa/cargar_ClientesEmpresa.html">Cargar Empresas</a></li>
+                                    <li><a href="clientesEmpresa/editar_ClientesEmpresa.html">Editar Empresas</a></li>
+                                    <li><a href="clientesEmpresa/borrar_ClientesEmpresa.html">Borrar Empresas</a></li>
+                                    <li><a href="clientesEmpresa/buscar_ClientesEmpresa.html">Buscar Empresas</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="container__mainIzquierdo">
+                <table>
+                    <tr><td><h3> Lunes: </h3></td></tr>
+                    <tr><td><h4> Clientes: - Bidones: - Maquinas: </h4></td></tr>
+                    
+                    <tr><td><h3> Martes: </h3></td></tr>
+                    <tr><td><h4> Clientes: - Bidones: - Maquinas: </h4></td></tr>
+                    
+                    <tr><td><h3> Míercoles</h3></td></tr>
+                    <tr><td><h4> Clientes: - Bidones: - Maquinas: </h4></td></tr>
+                    
+                    <tr><td><h3> Jueves</h3></td></tr>
+                    <tr><td><h4> Clientes: - Bidones: - Maquinas: </h4></td></tr>
+                    
+                    <tr><td><h3> Viernes: </h3></td></tr>
+                    <tr><td><h4> Clientes: - Bidones: - Maquinas: </h4></td></tr>
+                    
+                    <tr><td><h3> Sábado: </h3></td></tr>
+                    <tr><td><h4> Clientes: - Bidones: - Maquinas: </h4></td></tr>
+                </table>
+            </div>
+                
+            <div class="container__mainDerecho">
+                <table>
+                    <tr><td>. TOTAL CLIENTES: </td></tr>
+                    <tr><td>. BIDONES: </td></tr>
+                    <tr><td>. MAQUINAS: </td></tr>
+                </table>
+            </div>
+        </main>
+    </body>
+</html>

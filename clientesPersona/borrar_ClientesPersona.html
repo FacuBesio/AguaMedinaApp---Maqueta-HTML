@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>AguaMedina App - Home</title>
+    <!-- CSS -->
+        <link rel="stylesheet" href="../css/clientePersona/borrar_ClientePersonaCSS.css">
+    <!-- GoogleFonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,
+        300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    </head>
+
+
+    <body>
+        <!-------------------- HEADER -------------------->
+        <header>
+
+            <!-- HEADER SUPERIOR -->
+            <div class="header__superior">
+                <h1 style="color: rgb(183, 206, 52); font-size: 70px;">
+                    <strong style="font-weight: 900; color:rgb(0, 147, 180);">Agua</strong>Medina<strong style="font-weight: 800; color:rgb(220, 150, 20);">App</strong>                                                                                
+                </h1>
+            </div>
+
+            <!-- LOGO -->
+            <div class="logo">
+                <img src="../imagenes/logoAguaMedina.png" >
+            </div>    
+                
+            <!-- HEADER CONTAINER MENU -->
+            <div class="container__menu">
+                <div class="menu">
+                    <nav>
+                        <ul>
+                            <li><a href="../index.html" style="background-color: rgb(183, 206, 53);">     </a>
+                            </li>
+                            
+                            <li><a href="recorridos/recorridos_Home.html">Recorridos           </a>
+                                <ul>
+                                    <li><a href="recorridos/cargar_Recorridos.html">Cargar Recorridos</a></li>
+                                    <li><a href="recorridos/editar_Recorridos.html">Editar Recorridos</a></li>
+                                    <li><a href="recorridos/borrar_Recorridos.html">Borrar Recorridos</a></li>
+                                    <li><a href="recorridos/buscar_Recorridos.html">Buscar Recorridos</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li><a href="Home_ClientesPersona.html" id="selected">Clientes Persona     </a>
+                                <ul>
+                                    <li><a href="cargar_ClientesPersona.html">Cargar Personas</a></li>
+                                    <li><a href="editar_ClientesPersona.html">Editar Personas</a></li>
+                                    <li><a href="borrar_ClientesPersona.html">Borrar Personas</a></li>
+                                    <li><a href="buscar_ClientesPersona.html">Buscar Personas</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li><a href="clientesEmpresa/clientesEmpresa_Home.html">Clientes Empresa     </a>
+                                <ul>
+                                    <li><a href="clientesEmpresa/cargar_ClientesEmpresa.html">Cargar Empresas</a></li>
+                                    <li><a href="clientesEmpresa/editar_ClientesEmpresa.html">Editar Empresas</a></li>
+                                    <li><a href="clientesEmpresa/borrar_ClientesEmpresa.html">Borrar Empresas</a></li>
+                                    <li><a href="clientesEmpresa/buscar_ClientesEmpresa.html">Buscar Empresas</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header> 
+        
+        <!-------------------- MAIN -------------------->
+        <main>
+            <!-- CONTAINER PARA SELECCIONAR PERSONA A ELIMINAR -->
+            <div class="container__seleccionar_EliminarPersona"> 
+                <form>
+                    <table>
+                        <h2>BORRAR PERSONA                                       </h2>
+                        <tr>
+                            <td>
+                                <select name="select__clientePersona">
+                                    <option value="Prueba" disabled="" selected="true" style="color: black;">
+                                        Seleccione la Persona a Borrar
+                                    </option>
+                                    <option disabled=""> Cargue un Cliente Persona por favor </option>
+                                    <option value="Opciones de Personas a Borrar ejemplo Maqueta HTML"></option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="reset" value="RESET"/> 
+                                <input type="submit" value="BORRAR"/> 
+                            </td>
+                        </tr>
+                    </table>
+                </form>   
+            </div>
+
+            <!--CONFIRMACION-->        
+            <div class="container__confirmacion_EliminarPersona"> 
+                <form>
+                    <table>
+                        <tr>
+                            <td>
+                                <h3>¿Confirma la ELIMINACIÓN de la Persona?</h3>
+                                <h2>
+                                    Carlos, Rios - Santos Lugares, Calle javalandia 80081 - 1123654587 - carlos@mail.com
+                                </h2>
+                            </td> 
+                        </tr>
+                        <tr>
+                            <td>
+                            <select name="select__confirmacion">
+                                                    <option value="false">No</option>
+                                                    <option value="true">Si</option>
+                                                </select>
+                            <input type="submit" value="OK"/> 
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>     
+        </main>
+    </body>
+</html>
