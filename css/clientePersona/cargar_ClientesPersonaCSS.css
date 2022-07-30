@@ -6,10 +6,11 @@
     text-decoration: none;
 }
 
+
 /*---------------------------------------- HEADER ----------------------------------------*/
 header{
     width: 100%;
-    position: fixed; /* para que se mantenga por encima de todo*/
+    *position: fixed; /* para que se mantenga por encima de todo*/
     top: 0;
     left: 0;
     background: #fff;
@@ -17,12 +18,12 @@ header{
 
 /* HEADER SUPERIOR */
 .header__superior{
-    max-width: 1400px;
+    
     margin: auto;
     display: flex;
     align-items: center; /*horizontal*/
     justify-content: space-between;
-    padding: 10px;
+    padding: 10px 0.7em;
 }
 
 .logo img{
@@ -34,7 +35,6 @@ header{
     margin-top: 14%;
     font-size: 42px;
     *background-color: plum;
-
 }
 
 .search input{
@@ -42,12 +42,11 @@ header{
     padding: 10px;
 }
 
-
 /* BARRA MENU */
 .container__menu{
     width: 100%;
     height: 70px;
-    padding: 0px 20px;
+    padding: 0px 1.25em;
     *background: #023877;
     *background-color: #0074c7;
     *background-color: rgb(122,198,224);
@@ -55,7 +54,6 @@ header{
 }
 
 .menu{
-    max-width: 1400px;
     height: 100%;
     margin: auto;
 }
@@ -81,6 +79,7 @@ nav > ul > li:first-child > a{
     background-repeat: no-repeat;
     background-position: center center;
     padding: 20px 40px;
+    border-radius: 0.1em;
 }
 
 nav > ul > li:first-child:hover > a{
@@ -93,11 +92,11 @@ nav > ul > li:first-child:hover > a{
 nav > ul > li > a{
     width: 100%;
     height: 100%;
-    padding: 14px;
+    padding: 30px;
     display: flex;
     align-items: center;
     text-transform: uppercase;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
     transition: all 200ms ease;
     color: #fff;
@@ -108,6 +107,7 @@ nav > ul > li > a:hover{
     *background: #0074c7;
     background: rgb(220, 150, 20);
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+    border-radius: 0.5em;
 }
 
 #selected{
@@ -116,6 +116,7 @@ nav > ul > li > a:hover{
     background-color: rgb(230, 130, 20);
     *background-color: rgb(122,198,224);
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+    border-radius: 0.5em;
 }
 
 /* SUBMENU */
@@ -179,20 +180,29 @@ nav ul li ul li a:hover{
 }
 
 
+
 /*---------------------------------------- MAIN ----------------------------------------*/
 main{
     *background: #f0f0f0;
-    margin: 0px 0px;
+    margin: 1em 1.25em;
     padding: 0px 0px;
-    height: 558px;
-    background: plum;
+    height: auto;
+    *background: plum;
 }
 
-/* CLIENTES PERSONAS */
-.container__main_ClientesPersona{
-    width: 30%;
-    height: 100%;
-    margin-top: 198px;
+.contenedor__principal {
+    border-radius: 0.5em;
+    display: flex;
+    gap: 1em;
+    max-height: 700px;
+    *background: plum;
+}
+
+/* ----- CARGAR PERSONAS -----*/
+.container__cargarPersona{
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+    width: 35%;
+    border-radius: 0.5em;
     align-items: center;
     text-align: center;
     color: white;
@@ -201,91 +211,108 @@ main{
     background-color: rgb(85, 168, 196);
 }
 
-
-.container__main_ClientesPersona form{
+.container__cargarPersona form{
     width: 100%;
     height: 100%;
     *background-color: coral;
-
 }
 
-.container__main_ClientesPersona h2{
-    padding-top: 20px;
-    font-size: 20px;
-    padding-bottom: 5px;
-    *background-color: plum;
-
-}
-
-.container__main_ClientesPersona h3{
-    font-size: 16px;
-    *padding-top: 5px;
-    *background-color: aquamarine;
-
-}
-
-.container__main_ClientesPersona table{
+.container__cargarPersona table{
     width: 100%;
-    height: 80%;
+    height: 100%;
     *background-color: orange;
-    padding: 0px 0px;
+    
 }
 
-.container__main_ClientesPersona table tr td input{
+.container__cargarPersona table tr td h2{
+    padding-top: 10px;
+    font-size: 24px;
+    font-weight: 800;
+    *padding-bottom: 5px;
+    *background-color: plum;
+}
+
+.container__cargarPersona table tr td h3{
+    padding: 10px 2px;
+    margin-top: 5px;
+    font-size: 20px;
+    *background-color: plum;
+}
+
+
+.container__cargarPersona table tr td a{
+    color: white;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 18px;
+    *background-color: aquamarine;
+    text-decoration: underline;
+    
+}
+
+
+
+.container__cargarPersona table tr td input{
     width: 85%;
-    height: 32px;
-    padding: 5px;
+    padding: 7px;
+    margin-top: 3px;
     font-size: 16px;
     text-align: center;
     font-weight: 600;
     *font-weight: bolder;
     *background-color: aquamarine;
-    
+    border-radius: 0.5em;
+    border-color: #f0f0f0;
 }
 
-.container__main_ClientesPersona table tr td select{
+
+
+.container__cargarPersona table tr td select{
     width: 85%;
-    height: 32px;
-    padding: 5px; 
+    padding: 7px;
+    margin-top: 3px;
     text-align: center;
     font-weight: bolder;
-    font-size: 14px;
+    font-size: 16px;
+    border-radius: 0.5em;
+    border-color: #f0f0f0;
 }
 
-.container__main_ClientesPersona table tr td select option{
+.container__cargarPersona table tr td select option{
     font-size: 16px; 
     font-weight: 600;
 }
 
-/* TABLA */
+/* ----- TABLA -----*/
 .tabla_ClientesPersona{
-    width: 70%;
-    height: 558px;
-    margin-left: 30%;
-    margin-top: -558px;
+    width: 80%;
+    *height: auto;
     background-color: white;
     *background-color: coral;
     overflow-y: scroll;
     overflow-x: scroll;
-    padding-top: 5px;
-
 }
 
+.tabla_ClientesPersona::-webkit-scrollbar{
+    width: 7px;
+    height: 7px;
+}
 
+.tabla_ClientesPersona::-webkit-scrollbar-thumb{
+    background-color: rgb(159, 186, 196);
+    border-radius: 0.5em;
+    
+}
 
 .tabla_ClientesPersona table{
     width: 2400px;
-    *height: 490px;
     color: rgb(0, 147, 180);
     text-align: center;
-    background-color: white;
+    background: #f0f0f0;
     *background-color: coral;
-    padding: 5px 5px; 
-    padding-right: 2px;
-    
-    
+    padding: 15px 10px;
+    border-radius: 0.5em;
 }
-
 
 .tabla_ClientesPersona table tr th{
     text-transform: uppercase;
@@ -296,16 +323,13 @@ main{
     *padding: 5px;
     margin-top: 0;
     color:rgb(159, 197, 58);
- 
 }
 
 .tabla_ClientesPersona table tr td{
     text-transform: capitalize;
     text-align: center;
     padding: 4px 0px;
-    
 }
-
 
 
 
@@ -330,11 +354,47 @@ main{
     display: none;
 }
 
+@media screen and (max-width: 1050px){
 
-@media screen and (max-width: 775px){
+    .container__cargarPersona h3{
+        font-size: 16px;
+        *background-color: plum;
+    
+    }
+    
+    .container__cargarPersona table tr td input{
+        font-size: 14px;
+        *background-color: plum;
+    }
+
+    .container__cargarPersona table tr td select{
+        font-size: 14px;
+        *background-color: plum;
+    }
+
+    .container__cargarPersona table tr td select option{
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (max-width: 800px){
+
+    /* ----- HEADER RESPONSIVE -----*/
+    .menu{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
 
     .search input{
         display: none;
+    }
+
+    .search h1{
+        margin-top: 14%;
+        font-size: 20px;
+        *background-color: plum;
     }
     
     .header__superior{
@@ -343,6 +403,24 @@ main{
 
     .logo img{
         width: 50px;
+    }
+
+    #selected{
+        transform: scale(1);
+    }
+
+    #label__check{
+        display: block;
+    }
+
+    .icon__menu{
+        display: flex;
+    }
+
+    #check__menu:checked ~ nav > ul{
+        height: 300px;
+        visibility: visible;
+        opacity: 1;
     }
 
     nav > ul {
@@ -376,58 +454,30 @@ main{
         background-position: 20px;
     }
 
-    #selected{
-        transform: scale(1);
-    }
-
-    #label__check{
-        display: block;
-    }
-
-    .icon__menu{
-        display: flex;
-    }
-
-    #check__menu:checked ~ nav > ul{
-        height: 300px;
-        visibility: visible;
-        opacity: 1;
-    }
-
-    main{
+    /* ----- MAIN RESPONSIVE -----*/
+    
+    /* CARGAR PERSONA */
+    .container__cargarPersona{
         width: 100%;
-        height: 575px;
-        padding: 0px 0px;
-        *margin-top: 158px;
         *background: plum;
-    }
- 
-    .container__main_ClientesPersona{
-        width: 100%;
-        margin-top: 147px;
-        *background: plum;
-    }
-
-    .container__main_ClientesPersona table{
-        width: 100%;
-    }
-
-
-    .search h1{
-        margin-top: 14%;
-        font-size: 20px;
-        *background-color: plum;
     }
     
-    .tabla_ClientesPersona{
-        width: 100%;
-        height: 558px;
-        margin-left: 0;
-        margin-top: 0px;
-        
+    .contenedor__principal {
+        display: flex;
+        flex-direction: column;
+        max-height: 1150px;
+    }
+   
+    .container__cargarPersona h3{
+        font-size: 20px;
     }
 
-    .tabla_ClientesPersona table{
-        *padding-top: 10px;
+    .tabla_ClientesPersona{
+        width: 100%;
     }
+
+   .tabla_ClientesPersona table{
+        padding: 10px; 
+    }
+
 }

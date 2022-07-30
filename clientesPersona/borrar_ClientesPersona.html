@@ -5,36 +5,43 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>AguaMedina App - Home</title>
-    <!-- CSS -->
+        <title>AguaMedina App - Borrar Personas</title>
+        <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+    
+        <!-- CSS -->
         <link rel="stylesheet" href="../css/clientePersona/borrar_ClientePersonaCSS.css">
-    <!-- GoogleFonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+        <!-- GoogleFonts -->
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,
         300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
     </head>
-
-
+    
     <body>
-        <!-------------------- HEADER -------------------->
+        <!-- ---------------------------------------- HEADER ---------------------------------------- -->
         <header>
-
             <!-- HEADER SUPERIOR -->
             <div class="header__superior">
-                <h1 style="color: rgb(183, 206, 52); font-size: 70px;">
-                    <strong style="font-weight: 900; color:rgb(0, 147, 180);">Agua</strong>Medina<strong style="font-weight: 800; color:rgb(220, 150, 20);">App</strong>                                                                                
-                </h1>
+                <!-- LOGO -->
+                <div class="logo">
+                    <img src="../imagenes/logoAguaMedina.png" alt="">
+                </div>
+                <!-- SEARCH -->
+                <div class="search">
+                    <!--  <input type="search" placeholder="¿Qué deseas buscar?">-->
+                    <h1 style="color: rgb(183, 206, 52)">
+                        <strong style="font-weight: 900; color:rgb(0, 147, 180);">Agua</strong>Medina<strong style="font-weight: 800; color:rgb(220, 150, 20);">App</strong>                                                                                
+                    </h1>
+                </div>
             </div>
-
-            <!-- LOGO -->
-            <div class="logo">
-                <img src="../imagenes/logoAguaMedina.png" >
-            </div>    
-                
+    
             <!-- HEADER CONTAINER MENU -->
-            <div class="container__menu">
-                <div class="menu">
+            <div class="container__menu"> <!-- Representa la línea horizontal entera -->
+                <!-- MENU -->
+                <div class="menu"> <!-- Representa al Menú sobre la línea horizontal entera -->
+                    <input type="checkbox" id="check__menu">
+                    <label id="#label__check" for="check__menu">
+                        <i class="fa-solid fa-bars icon__menu"></i>
+                    </label>
                     <nav>
                         <ul>
                             <li><a href="../index.html" style="background-color: rgb(183, 206, 53);">     </a>
@@ -43,87 +50,544 @@
                             <li><a href="recorridos/recorridos_Home.html">Recorridos           </a>
                                 <ul>
                                     <li><a href="recorridos/cargar_Recorridos.html">Cargar Recorridos</a></li>
+                                    <li><a href="recorridos/buscar_Recorridos.html">Buscar Recorridos</a></li>
                                     <li><a href="recorridos/editar_Recorridos.html">Editar Recorridos</a></li>
                                     <li><a href="recorridos/borrar_Recorridos.html">Borrar Recorridos</a></li>
-                                    <li><a href="recorridos/buscar_Recorridos.html">Buscar Recorridos</a></li>
                                 </ul>
                             </li>
                             
-                            <li><a href="Home_ClientesPersona.html" id="selected">Clientes Persona     </a>
+                            <li><a href="Home_ClientesPersona.html" id="selected">Personas</a>
                                 <ul>
                                     <li><a href="cargar_ClientesPersona.html">Cargar Personas</a></li>
+                                    <li><a href="buscar_ClientesPersona.html">Buscar Personas</a></li>
                                     <li><a href="editar_ClientesPersona.html">Editar Personas</a></li>
                                     <li><a href="borrar_ClientesPersona.html">Borrar Personas</a></li>
-                                    <li><a href="buscar_ClientesPersona.html">Buscar Personas</a></li>
                                 </ul>
                             </li>
                             
-                            <li><a href="clientesEmpresa/clientesEmpresa_Home.html">Clientes Empresa     </a>
+                            <li><a href="clientesEmpresa/clientesEmpresa_Home.html">Empresas</a>
                                 <ul>
                                     <li><a href="clientesEmpresa/cargar_ClientesEmpresa.html">Cargar Empresas</a></li>
+                                    <li><a href="clientesEmpresa/buscar_ClientesEmpresa.html">Buscar Empresas</a></li>
                                     <li><a href="clientesEmpresa/editar_ClientesEmpresa.html">Editar Empresas</a></li>
                                     <li><a href="clientesEmpresa/borrar_ClientesEmpresa.html">Borrar Empresas</a></li>
-                                    <li><a href="clientesEmpresa/buscar_ClientesEmpresa.html">Buscar Empresas</a></li>
                                 </ul>
                             </li>
                         </ul>
                     </nav>
                 </div>
             </div>
-        </header> 
+        </header>
         
-        <!-------------------- MAIN -------------------->
+        <!-- ---------------------------------------- MAIN ---------------------------------------- -->
         <main>
-            <!-- CONTAINER PARA SELECCIONAR PERSONA A ELIMINAR -->
-            <div class="container__seleccionar_EliminarPersona"> 
-                <form>
-                    <table>
-                        <h2>BORRAR PERSONA                                       </h2>
-                        <tr>
-                            <td>
-                                <select name="select__clientePersona">
-                                    <option value="Prueba" disabled="" selected="true" style="color: black;">
-                                        Seleccione la Persona a Borrar
-                                    </option>
-                                    <option disabled=""> Cargue un Cliente Persona por favor </option>
-                                    <option value="Opciones de Personas a Borrar ejemplo Maqueta HTML"></option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input type="reset" value="RESET"/> 
-                                <input type="submit" value="BORRAR"/> 
-                            </td>
-                        </tr>
-                    </table>
-                </form>   
-            </div>
+            <!-- CONTENEDOR PRINCIPAL -->
+            <div class="contenedor__principal">
 
-            <!--CONFIRMACION-->        
-            <div class="container__confirmacion_EliminarPersona"> 
-                <form>
+                <!-- BORRAR PERSONAS -->
+                <div class="container__BorrarPersona">
+                    
+                    <!-- SELECCIONAR PERSONA -->
+                    <div class="container_SelectorPersona">
+                        <form>
+                            <table>
+                                <tr>
+                                    <td><h2> BORRAR PERSONA </h2>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <select name="select__clientePersona">
+                                            <option value="Prueba" disabled="" selected="true" style="color: black;">
+                                                Seleccione la Persona a Borrar
+                                            </option>
+                                            <option disabled=""> Cargue un Cliente Persona por favor </option>
+                                            <option value="">
+                                            Carlos, Rios - Santos Lugares, Calle javalandia 80081 - 1123654587 - carlos@mail.com
+                                            </option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="submit" value="BORRAR"/> 
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                    
+                    <!-- CONFIRMACION -->
+                    <div class="container_Confirmacion">
+                        <form>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <h2>¿Confirma la ELIMINACIÓN de la Persona?</h2>
+                                        <h3>
+                                            Carlos, Rios - Santos Lugares, Calle javalandia 80081 - 1123654587 - carlos@mail.com
+                                        </h3>
+                                    </td> 
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <select name="select__confirmacion">
+                                                                <option value="false">No</option>
+                                                                <option value="true">Si</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="submit" value="OK"/> 
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+                    
+                <!-- TABLA -->
+                <div class="tabla_ClientesPersona">
+                    <!-- Tabla de Ejemplo -->
                     <table>
-                        <tr>
-                            <td>
-                                <h3>¿Confirma la ELIMINACIÓN de la Persona?</h3>
-                                <h2>
-                                    Carlos, Rios - Santos Lugares, Calle javalandia 80081 - 1123654587 - carlos@mail.com
-                                </h2>
-                            </td> 
+                        <tr id="tr_id" >
+                            <th>Id</th>
+                            <th>Nombre</th>
+                            <th>Dirección</th>
+                            <th>Localidad</th>
+                            <th>Contacto</th>
+                            <th>Servicio</th>
+                            <th>Bidones</th>
+                            <th>Maq</th>
+                            <th>Precio ($)</th>
+                            <th>Recorrido</th>
+                            <th>Mail</th>
+                            <th>Fecha Alta</th>
+                            <th>Detalles</th>
                         </tr>
                         <tr>
-                            <td>
-                            <select name="select__confirmacion">
-                                                    <option value="false">No</option>
-                                                    <option value="true">Si</option>
-                                                </select>
-                            <input type="submit" value="OK"/> 
-                            </td>
+                            <td>01</td>
+                            <td>Maria Juana Greenhills</td>
+                            <td> Calle de algun lugar 1234</td>
+                            <td>Localidad de ese lugar</td>
+                            <td>(0234)1165439874</td>
+                            <td>Servicio Agua</td>
+                            <td>4</td>
+                            <td>2</td>
+                            <td>1000</td>
+                            <td>Garin, Lunes (Zona A)</td>
+                            <td>pruebaEmail_bastanteLargo@gmail.com</td>
+                            <td>19-07-2022</td>
+                            <td>Detalles de Persona - Detalles de Persona</td>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td>Maria Juana Greenhills</td>
+                            <td> Calle de algun lugar 1234</td>
+                            <td>Localidad de ese lugar</td>
+                            <td>(0234)1165439874</td>
+                            <td>Servicio Agua</td>
+                            <td>4</td>
+                            <td>2</td>
+                            <td>1000</td>
+                            <td>Garin, Lunes (Zona A)</td>
+                            <td>pruebaEmail_bastanteLargo@gmail.com</td>
+                            <td>19-07-2022</td>
+                            <td>Detalles de Persona - Detalles de Persona</td>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td>Maria Juana Greenhills</td>
+                            <td> Calle de algun lugar 1234</td>
+                            <td>Localidad de ese lugar</td>
+                            <td>(0234)1165439874</td>
+                            <td>Servicio Agua</td>
+                            <td>4</td>
+                            <td>2</td>
+                            <td>1000</td>
+                            <td>Garin, Lunes (Zona A)</td>
+                            <td>pruebaEmail_bastanteLargo@gmail.com</td>
+                            <td>19-07-2022</td>
+                            <td>Detalles de Persona - Detalles de Persona</td>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td>Maria Juana Greenhills</td>
+                            <td> Calle de algun lugar 1234</td>
+                            <td>Localidad de ese lugar</td>
+                            <td>(0234)1165439874</td>
+                            <td>Servicio Agua</td>
+                            <td>4</td>
+                            <td>2</td>
+                            <td>1000</td>
+                            <td>Garin, Lunes (Zona A)</td>
+                            <td>pruebaEmail_bastanteLargo@gmail.com</td>
+                            <td>19-07-2022</td>
+                            <td>Detalles de Persona - Detalles de Persona</td>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td>Maria Juana Greenhills</td>
+                            <td> Calle de algun lugar 1234</td>
+                            <td>Localidad de ese lugar</td>
+                            <td>(0234)1165439874</td>
+                            <td>Servicio Agua</td>
+                            <td>4</td>
+                            <td>2</td>
+                            <td>1000</td>
+                            <td>Garin, Lunes (Zona A)</td>
+                            <td>pruebaEmail_bastanteLargo@gmail.com</td>
+                            <td>19-07-2022</td>
+                            <td>Detalles de Persona - Detalles de Persona</td>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td>Maria Juana Greenhills</td>
+                            <td> Calle de algun lugar 1234</td>
+                            <td>Localidad de ese lugar</td>
+                            <td>(0234)1165439874</td>
+                            <td>Servicio Agua</td>
+                            <td>4</td>
+                            <td>2</td>
+                            <td>1000</td>
+                            <td>Garin, Lunes (Zona A)</td>
+                            <td>pruebaEmail_bastanteLargo@gmail.com</td>
+                            <td>19-07-2022</td>
+                            <td>Detalles de Persona - Detalles de Persona</td>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td>Maria Juana Greenhills</td>
+                            <td> Calle de algun lugar 1234</td>
+                            <td>Localidad de ese lugar</td>
+                            <td>(0234)1165439874</td>
+                            <td>Servicio Agua</td>
+                            <td>4</td>
+                            <td>2</td>
+                            <td>1000</td>
+                            <td>Garin, Lunes (Zona A)</td>
+                            <td>pruebaEmail_bastanteLargo@gmail.com</td>
+                            <td>19-07-2022</td>
+                            <td>Detalles de Persona - Detalles de Persona</td>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td>Maria Juana Greenhills</td>
+                            <td> Calle de algun lugar 1234</td>
+                            <td>Localidad de ese lugar</td>
+                            <td>(0234)1165439874</td>
+                            <td>Servicio Agua</td>
+                            <td>4</td>
+                            <td>2</td>
+                            <td>1000</td>
+                            <td>Garin, Lunes (Zona A)</td>
+                            <td>pruebaEmail_bastanteLargo@gmail.com</td>
+                            <td>19-07-2022</td>
+                            <td>Detalles de Persona - Detalles de Persona</td>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td>Maria Juana Greenhills</td>
+                            <td> Calle de algun lugar 1234</td>
+                            <td>Localidad de ese lugar</td>
+                            <td>(0234)1165439874</td>
+                            <td>Servicio Agua</td>
+                            <td>4</td>
+                            <td>2</td>
+                            <td>1000</td>
+                            <td>Garin, Lunes (Zona A)</td>
+                            <td>pruebaEmail_bastanteLargo@gmail.com</td>
+                            <td>19-07-2022</td>
+                            <td>Detalles de Persona - Detalles de Persona</td>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td>Maria Juana Greenhills</td>
+                            <td> Calle de algun lugar 1234</td>
+                            <td>Localidad de ese lugar</td>
+                            <td>(0234)1165439874</td>
+                            <td>Servicio Agua</td>
+                            <td>4</td>
+                            <td>2</td>
+                            <td>1000</td>
+                            <td>Garin, Lunes (Zona A)</td>
+                            <td>pruebaEmail_bastanteLargo@gmail.com</td>
+                            <td>19-07-2022</td>
+                            <td>Detalles de Persona - Detalles de Persona</td>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td>Maria Juana Greenhills</td>
+                            <td> Calle de algun lugar 1234</td>
+                            <td>Localidad de ese lugar</td>
+                            <td>(0234)1165439874</td>
+                            <td>Servicio Agua</td>
+                            <td>4</td>
+                            <td>2</td>
+                            <td>1000</td>
+                            <td>Garin, Lunes (Zona A)</td>
+                            <td>pruebaEmail_bastanteLargo@gmail.com</td>
+                            <td>19-07-2022</td>
+                            <td>Detalles de Persona - Detalles de Persona</td>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td>Maria Juana Greenhills</td>
+                            <td> Calle de algun lugar 1234</td>
+                            <td>Localidad de ese lugar</td>
+                            <td>(0234)1165439874</td>
+                            <td>Servicio Agua</td>
+                            <td>4</td>
+                            <td>2</td>
+                            <td>1000</td>
+                            <td>Garin, Lunes (Zona A)</td>
+                            <td>pruebaEmail_bastanteLargo@gmail.com</td>
+                            <td>19-07-2022</td>
+                            <td>Detalles de Persona - Detalles de Persona</td>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td>Maria Juana Greenhills</td>
+                            <td> Calle de algun lugar 1234</td>
+                            <td>Localidad de ese lugar</td>
+                            <td>(0234)1165439874</td>
+                            <td>Servicio Agua</td>
+                            <td>4</td>
+                            <td>2</td>
+                            <td>1000</td>
+                            <td>Garin, Lunes (Zona A)</td>
+                            <td>pruebaEmail_bastanteLargo@gmail.com</td>
+                            <td>19-07-2022</td>
+                            <td>Detalles de Persona - Detalles de Persona</td>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td>Maria Juana Greenhills</td>
+                            <td> Calle de algun lugar 1234</td>
+                            <td>Localidad de ese lugar</td>
+                            <td>(0234)1165439874</td>
+                            <td>Servicio Agua</td>
+                            <td>4</td>
+                            <td>2</td>
+                            <td>1000</td>
+                            <td>Garin, Lunes (Zona A)</td>
+                            <td>pruebaEmail_bastanteLargo@gmail.com</td>
+                            <td>19-07-2022</td>
+                            <td>Detalles de Persona - Detalles de Persona</td>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td>Maria Juana Greenhills</td>
+                            <td> Calle de algun lugar 1234</td>
+                            <td>Localidad de ese lugar</td>
+                            <td>(0234)1165439874</td>
+                            <td>Servicio Agua</td>
+                            <td>4</td>
+                            <td>2</td>
+                            <td>1000</td>
+                            <td>Garin, Lunes (Zona A)</td>
+                            <td>pruebaEmail_bastanteLargo@gmail.com</td>
+                            <td>19-07-2022</td>
+                            <td>Detalles de Persona - Detalles de Persona</td>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td>Maria Juana Greenhills</td>
+                            <td> Calle de algun lugar 1234</td>
+                            <td>Localidad de ese lugar</td>
+                            <td>(0234)1165439874</td>
+                            <td>Servicio Agua</td>
+                            <td>4</td>
+                            <td>2</td>
+                            <td>1000</td>
+                            <td>Garin, Lunes (Zona A)</td>
+                            <td>pruebaEmail_bastanteLargo@gmail.com</td>
+                            <td>19-07-2022</td>
+                            <td>Detalles de Persona - Detalles de Persona</td>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td>Maria Juana Greenhills</td>
+                            <td> Calle de algun lugar 1234</td>
+                            <td>Localidad de ese lugar</td>
+                            <td>(0234)1165439874</td>
+                            <td>Servicio Agua</td>
+                            <td>4</td>
+                            <td>2</td>
+                            <td>1000</td>
+                            <td>Garin, Lunes (Zona A)</td>
+                            <td>pruebaEmail_bastanteLargo@gmail.com</td>
+                            <td>19-07-2022</td>
+                            <td>Detalles de Persona - Detalles de Persona</td>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td>Maria Juana Greenhills</td>
+                            <td> Calle de algun lugar 1234</td>
+                            <td>Localidad de ese lugar</td>
+                            <td>(0234)1165439874</td>
+                            <td>Servicio Agua</td>
+                            <td>4</td>
+                            <td>2</td>
+                            <td>1000</td>
+                            <td>Garin, Lunes (Zona A)</td>
+                            <td>pruebaEmail_bastanteLargo@gmail.com</td>
+                            <td>19-07-2022</td>
+                            <td>Detalles de Persona - Detalles de Persona</td>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td>Maria Juana Greenhills</td>
+                            <td> Calle de algun lugar 1234</td>
+                            <td>Localidad de ese lugar</td>
+                            <td>(0234)1165439874</td>
+                            <td>Servicio Agua</td>
+                            <td>4</td>
+                            <td>2</td>
+                            <td>1000</td>
+                            <td>Garin, Lunes (Zona A)</td>
+                            <td>pruebaEmail_bastanteLargo@gmail.com</td>
+                            <td>19-07-2022</td>
+                            <td>Detalles de Persona - Detalles de Persona</td>
+                        </tr><tr>
+                            <td>01</td>
+                            <td>Maria Juana Greenhills</td>
+                            <td> Calle de algun lugar 1234</td>
+                            <td>Localidad de ese lugar</td>
+                            <td>(0234)1165439874</td>
+                            <td>Servicio Agua</td>
+                            <td>4</td>
+                            <td>2</td>
+                            <td>1000</td>
+                            <td>Garin, Lunes (Zona A)</td>
+                            <td>pruebaEmail_bastanteLargo@gmail.com</td>
+                            <td>19-07-2022</td>
+                            <td>Detalles de Persona - Detalles de Persona</td>
+                        </tr><tr>
+                            <td>01</td>
+                            <td>Maria Juana Greenhills</td>
+                            <td> Calle de algun lugar 1234</td>
+                            <td>Localidad de ese lugar</td>
+                            <td>(0234)1165439874</td>
+                            <td>Servicio Agua</td>
+                            <td>4</td>
+                            <td>2</td>
+                            <td>1000</td>
+                            <td>Garin, Lunes (Zona A)</td>
+                            <td>pruebaEmail_bastanteLargo@gmail.com</td>
+                            <td>19-07-2022</td>
+                            <td>Detalles de Persona - Detalles de Persona</td>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td>Maria Juana Greenhills</td>
+                            <td> Calle de algun lugar 1234</td>
+                            <td>Localidad de ese lugar</td>
+                            <td>(0234)1165439874</td>
+                            <td>Servicio Agua</td>
+                            <td>4</td>
+                            <td>2</td>
+                            <td>1000</td>
+                            <td>Garin, Lunes (Zona A)</td>
+                            <td>pruebaEmail_bastanteLargo@gmail.com</td>
+                            <td>19-07-2022</td>
+                            <td>Detalles de Persona - Detalles de Persona</td>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td>Maria Juana Greenhills</td>
+                            <td> Calle de algun lugar 1234</td>
+                            <td>Localidad de ese lugar</td>
+                            <td>(0234)1165439874</td>
+                            <td>Servicio Agua</td>
+                            <td>4</td>
+                            <td>2</td>
+                            <td>1000</td>
+                            <td>Garin, Lunes (Zona A)</td>
+                            <td>pruebaEmail_bastanteLargo@gmail.com</td>
+                            <td>19-07-2022</td>
+                            <td>Detalles de Persona - Detalles de Persona</td>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td>Maria Juana Greenhills</td>
+                            <td> Calle de algun lugar 1234</td>
+                            <td>Localidad de ese lugar</td>
+                            <td>(0234)1165439874</td>
+                            <td>Servicio Agua</td>
+                            <td>4</td>
+                            <td>2</td>
+                            <td>1000</td>
+                            <td>Garin, Lunes (Zona A)</td>
+                            <td>pruebaEmail_bastanteLargo@gmail.com</td>
+                            <td>19-07-2022</td>
+                            <td>Detalles de Persona - Detalles de Persona</td>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td>Maria Juana Greenhills</td>
+                            <td> Calle de algun lugar 1234</td>
+                            <td>Localidad de ese lugar</td>
+                            <td>(0234)1165439874</td>
+                            <td>Servicio Agua</td>
+                            <td>4</td>
+                            <td>2</td>
+                            <td>1000</td>
+                            <td>Garin, Lunes (Zona A)</td>
+                            <td>pruebaEmail_bastanteLargo@gmail.com</td>
+                            <td>19-07-2022</td>
+                            <td>Detalles de Persona - Detalles de Persona</td>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td>Maria Juana Greenhills</td>
+                            <td> Calle de algun lugar 1234</td>
+                            <td>Localidad de ese lugar</td>
+                            <td>(0234)1165439874</td>
+                            <td>Servicio Agua</td>
+                            <td>4</td>
+                            <td>2</td>
+                            <td>1000</td>
+                            <td>Garin, Lunes (Zona A)</td>
+                            <td>pruebaEmail_bastanteLargo@gmail.com</td>
+                            <td>19-07-2022</td>
+                            <td>Detalles de Persona - Detalles de Persona</td>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td>Maria Juana Greenhills</td>
+                            <td> Calle de algun lugar 1234</td>
+                            <td>Localidad de ese lugar</td>
+                            <td>(0234)1165439874</td>
+                            <td>Servicio Agua</td>
+                            <td>4</td>
+                            <td>2</td>
+                            <td>1000</td>
+                            <td>Garin, Lunes (Zona A)</td>
+                            <td>pruebaEmail_bastanteLargo@gmail.com</td>
+                            <td>19-07-2022</td>
+                            <td>Detalles de Persona - Detalles de Persona</td>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td>Maria Juana Greenhills</td>
+                            <td> Calle de algun lugar 1234</td>
+                            <td>Localidad de ese lugar</td>
+                            <td>(0234)1165439874</td>
+                            <td>Servicio Agua</td>
+                            <td>4</td>
+                            <td>2</td>
+                            <td>1000</td>
+                            <td>Garin, Lunes (Zona A)</td>
+                            <td>pruebaEmail_bastanteLargo@gmail.com</td>
+                            <td>19-07-2022</td>
+                            <td>Detalles de Persona - Detalles de Persona</td>
                         </tr>
                     </table>
-                </form>
-            </div>     
+                </div>
+
+            </div>
         </main>
     </body>
 </html>

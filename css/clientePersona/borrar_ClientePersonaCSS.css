@@ -1,156 +1,144 @@
-
-* { padding: 0px;
-    margin: 0px;
+*{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: 'Source Sans Pro', sans-serif;
     text-decoration: none;
-    /*list-style: none;*/
 }
 
-/*-------------------- HEADER --------------------*/
+
+/*---------------------------------------- HEADER ----------------------------------------*/
 header{
     width: 100%;
-    position: fixed;
+    *position: fixed; /* para que se mantenga por encima de todo*/
     top: 0;
     left: 0;
-    background:#ffff ;
+    background: #fff;
 }
 
 /* HEADER SUPERIOR */
-.header__superior {
-    width: 50%;
-    height: 144px;
-    padding-top: 10px;
-    *background-color: plum;
-}
-
-.header__superior h1{
-    width: 100%;
-    height: 100%;
-    padding-left: 20px;
-    *background-color: aquamarine;
-}
-
-/* LOGO */
-.logo {
-    width: 50%;
-    height: 144px;
-    margin-top: -140px;;
-    margin-left: 50%;
-    padding-top: 3px;
-    align-items: center;
-    *justify-content: space-between;
-    *background-color: plum;
+.header__superior{
+    
+    margin: auto;
+    display: flex;
+    align-items: center; /*horizontal*/
+    justify-content: space-between;
+    padding: 10px 0.7em;
 }
 
 .logo img{
-    width: 15%; 
-    margin-left: 75%;
-} 
+    width: 100px;
+    *margin-left: -10%;
+}
 
+.search h1{
+    margin-top: 14%;
+    font-size: 42px;
+    *background-color: plum;
+}
 
-/* BARRA MENU GENERAL*/
+.search input{
+    width: 300px;
+    padding: 10px;
+}
+
+/* BARRA MENU */
 .container__menu{
-    width: 100%; 
-    height: 70px; 
-    background: rgb(0, 147, 180);
-    padding: 0px 0px; /*arriba-abajo, izquerda-derecha*/
-    margin-top: -20px;
+    width: 100%;
+    height: 70px;
+    padding: 0px 1.25em;
+    *background: #023877;
+    *background-color: #0074c7;
+    *background-color: rgb(122,198,224);
+    background-color: rgb(0, 147, 180);
 }
 
-/* BARRA MENU*/
 .menu{
-    max-width: 1400px;
-    margin:auto;
-    height: 100%; 
-    margin-left: 0px;
-    *background: plum;
+    height: 100%;
+    margin: auto;
 }
 
-nav {
+nav{
     height: 100%;
 }
 
-
-nav > ul {              
+nav > ul{
     height: 100%;
-    display: flex;      
+    display: flex;
 }
 
-
-/*MENU*/
-nav  ul  li{              
+nav ul li{
     height: 100%;
-    list-style: none;      
+    list-style: none;
     position: relative;
-    *background:orange;
-    
 }
 
-nav > ul > li:first-child > a{  
+nav > ul > li:first-child > a{
     background-image: url(../../imagenes/home.png);
     background-size: 24px;
     background-repeat: no-repeat;
     background-position: center center;
     padding: 20px 40px;
+    border-radius: 0.1em;
 }
 
-nav > ul > li:first-child:hover > a{  
+nav > ul > li:first-child:hover > a{
     background-image: url(../../imagenes/home.png);
     background-size: 24px;
     background-repeat: no-repeat;
     background-position: center center;
 }
 
-
-nav > ul > li > a{              
+nav > ul > li > a{
     width: 100%;
     height: 100%;
+    padding: 30px;
     display: flex;
     align-items: center;
-    padding: 14px;
-    color: aliceblue;
     text-transform: uppercase;
-    font-size: 14px;
-    transition: all 100ms ease;
-    *background:orange;
-    
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 200ms ease;
+    color: #fff;
 }
 
-nav > ul > li > a:hover{ 
-    transform: scale(1.1); 
+nav > ul > li > a:hover{
+    transform: scale(1.1);
+    *background: #0074c7;
     background: rgb(220, 150, 20);
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+    border-radius: 0.5em;
 }
 
-#selected {
-    transform: scale(1.1); 
-    *background-color: rgb(183, 206, 53);
+#selected{
+    transform: scale(1.1);
+    *background-color: #0074c7;
     background-color: rgb(230, 130, 20);
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-}   
+    *background-color: rgb(122,198,224);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+    border-radius: 0.5em;
+}
 
-/* BARRA SUBMENU*/
+/* SUBMENU */
 nav ul li ul{
     width: 200px;
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    position: absolute;
     top: 90px;
     left: -5px;
     padding: 14px 0px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
     visibility: hidden;
     opacity: 0;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-    z-index: 10; /*para que se mantenga arraiba de todo*/
-    transition: all 100ms ease;
-    *background:aquamarine;
+    background: #fff;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+    z-index: 10; /*Para que se ponga encima de cualquier contenido*/
+    transition: all 200ms ease;
 }
 
 nav ul li:hover ul{
     visibility: visible;
-    opacity: 1; /*para que se vea*/
+    opacity: 1;
     top: 70px;
 }
 
@@ -167,177 +155,394 @@ nav ul li ul:before{
 }
 
 nav ul li ul li a{
-    display: block;
-    color: rgb(0, 147, 180);
-    padding: 6px;
-    padding-left: 14px;
     margin-top: 10px;
-    font-size: 14px;
-    text-transform: capitalize;
-    transition: all 100ms ease;
-    *background:aquamarine;
+    margin-left: 5px;
+    padding-left: 14px;
+    padding: 6px;
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all 200ms ease;
+    color: #0099E9;
+    *background-color: plum;
 }
 
 nav ul li ul li a:hover{
+    *background: #0074C7;
     background-color: rgb(159, 197, 58);
-    /*background: rgb(228, 181, 93);*/
-    transform:scale(1.2);
-    color: #ffff;
-    padding-left: 20px;
+    color: #fff;
+    transform: scale(1.1);
+    padding-left: 25px;
     font-size: 14px;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
+    font-weight: 600;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
 }
 
 
-/*-------------------- MAIN --------------------*/
+
+/*---------------------------------------- MAIN ----------------------------------------*/
 main{
-    width: 100%;
-    top: 0;
-    left: 0;
+    *background: #f0f0f0;
+    margin: 1em 1.25em;
+    padding: 0px 0px;
+    height: auto;
+    *background: plum;
 }
 
-/* SELECCIONAR PERSONA A ELIMINAR */
+.contenedor__principal {
+    border-radius: 0.5em;
+    display: flex;
+    max-height: 700px;
+    gap: 1em;
+    *background: plum;
+}
 
-.container__seleccionar_EliminarPersona{
-    width: 800px;
-    height: 250px;
-    margin-top: 198px;
-    padding-top: 40px;
+/* ----- BORRAR PERSONAS -----*/
+.container__BorrarPersona{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    border-radius: 0.5em;
     align-items: center;
     text-align: center;
-    *background-color: plum;
-    background-color: rgb(0, 147, 180);
-    
+    color: white;
+    *background-color:plum;
+    *background-color: rgb(0, 147, 180);
+    background-color:#fff;
 }
 
-.container__seleccionar_EliminarPersona table{
-    padding: 10px;
-    *background-color: olive;
-    width: 800px;
-    align-items: center;
-    *display: flex;
-    *height: 80px;
-}
-
-.container__seleccionar_EliminarPersona h2{
-    color: rgb(159, 197, 58);
-    *background-color: burlywood;
-}
-
-.container__seleccionar_EliminarPersona table tr td{
-    align-items: center;
-    *background-color: aquamarine;
-    *display: flex;
-    *justify-content: space-between;
-    
-}
-
-.container__seleccionar_EliminarPersona table tr td select{
-    align-items: center;
-    width: 760px;
-    padding: 10px;
-    font-size: 16px; 
-    color: black;
+.container__BorrarPersona form table tr td input{
+    width: 50%;
+    height: 90%;
+    padding: 15px; 
+    font-size: 22px;
     font-weight: bolder;
-}
-
-
-.container__seleccionar_EliminarPersona table tr td select option{
-    font-size: 18px; 
-}
-
-.container__seleccionar_EliminarPersona table tr td input{
-    margin: 0px 40px;
-    margin-top: 15px;
-    padding: 10px;
-    align-items: center;
-    *background-color: aquamarine;
+    font-weight: 600;
+    border-radius: 0.5em;
     background-color:rgb(159, 197, 58); 
     border-color:rgb(183, 206, 53);
     color: white;
-    font-size: 20px; 
+    *background-color: plum;
+}
+
+.container__BorrarPersona form table tr td select{
+    width: 85%;
+    height: 75%;
+    padding: 10px; 
+    text-align: center;
     font-weight: bolder;
-    width: 260px;
-    height: 70px;
+    font-size: 20px;
+    border-radius: 0.5em;
+    border-color: #f0f0f0;
+}
+
+.container__BorrarPersona table tr td select option{
+    font-size: 18px; 
+    font-weight: 600;
+}
+
+/* SELECTOR DE PERSONAS */
+.container_SelectorPersona{
+    width: 100%;
+    height: 50%;
+    *padding: 10% 0px;
+    align-items: center;
+    text-align: center;
+    border-radius: 0.5em;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+    *background-color: rgb(85, 168, 196);
+    background-color: rgb(122,198,224);
+    *background-color:orange;
+}
+
+.container_SelectorPersona form{
+    height: 100%;
+    border-radius: 0.5em;
+}
+
+.container_SelectorPersona table{
+    width: 100%;
+    height: 100%;
+    padding: 5% 0px;
+    border-radius: 0.5em;
+    *background-color: blueviolet;
+}
+
+.container_SelectorPersona table tr td h2{
+    font-size: 26px;
+    font-weight: 800;
+    *background-color: plum;
 }
 
 
 /* CONFIRMACION */
-.container__confirmacion_EliminarPersona{
-    width: 800px;
-    height: 308px;
+.container_Confirmacion{
+    width: 100%;
+    height: 50%;
     align-items: center;
     text-align: center;
-    *background-color:coral; 
-    background-color: rgb(0, 147, 180);
+    border-radius: 0.5em;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+    background-color: rgb(85, 168, 196);
+    *background-color:aquamarine;
 }
 
-.container__confirmacion_EliminarPersona table{
-    width: 800px;
-    padding: 10px;
-    align-items: center;
-    *background-color:orange; 
+.container_Confirmacion form{
+    height: 100%;
+    border-radius: 0.5em;
+}
+
+.container_Confirmacion table{
+    width: 100%;
+    height: 100%;
+    padding: 1% 0px;
+    border-radius: 0.5em;
+    background-color: brown;
 }
 
 
-.container__confirmacion_EliminarPersona h2{
-    margin-top: 10px;
-    font-size: 22px;
-    color: white;
+.container_Confirmacion table tr td h2{
+    font-size: 30px;
+    font-weight: 800;
     *background-color: plum;
 }
 
-.container__confirmacion h2{
+.container_Confirmacion table tr td h3{
     font-size: 22px;
+    padding: 0px 5px;
     margin-top: 10px;
-    color: white;
+}
+
+.container_Confirmacion form table tr td select{
+    font-size: 22px;
+    text-transform: uppercase;
+}
+.container_Confirmacion form table tr td select option{
+    font-size: 24px;
+    text-transform: uppercase;
     *background-color: plum;
 }
 
-.container__confirmacion_EliminarPersona h3{
-    font-size: 26px;
-    font-weight: bolder;
-    *color: rgb(159, 197, 58);
-    *margin-top: 10px;
-    color: red;
+
+/* ----- TABLA -----*/
+.tabla_ClientesPersona{
+    width: 50%;
+    *height: 600px;
+    background-color: white;
+    *background-color: coral;
+    overflow-y: scroll;
+    overflow-x: scroll;
 }
 
-.container__confirmacion_EliminarPersona table tr td select{
-    margin-top: 20px;
-    padding: 10px;
-    padding-top: -40px;
-    width: 570px;
-    font-size: 24px; 
-    align-items: center;
-    text-align: center;
-    font-weight: bolder;
-    color: black;
-    *background-color:pink;
+.tabla_ClientesPersona::-webkit-scrollbar{
+    width: 7px;
+    height: 7px;
 }
 
-.container__confirmacion_EliminarPersona table tr td select option{
-    font-size: 24px; 
-    text-align: center
+.tabla_ClientesPersona::-webkit-scrollbar-thumb{
+    background-color: rgb(159, 186, 196);
+    border-radius: 0.5em;
     
 }
 
-.container__confirmacion_EliminarPersona table tr td input{
-    width: 260px;
-    height: 70px;
-    padding: 10px;
-    margin-top: 20px;
-    font-size: 22px; 
+.tabla_ClientesPersona table{
+    width: 2400px;
+    *height: 100%;
+    color: rgb(0, 147, 180);
+    text-align: center;
+    background: #f0f0f0;
+    *background-color: coral;
+    padding: 15px 10px;
+    border-radius: 0.5em;
+}
+
+.tabla_ClientesPersona table tr th{
+    text-transform: uppercase;
+    text-align: center;
     font-weight: bolder;
-    align-items: center;
-    *text-align: center;
-    color: white;
-    border-color:rgb(183, 206, 53);
-    background-color:rgb(159, 197, 58); 
-    *background-color:pink; 
+    font-size: 18px;
+    padding-top: 2px;
+    *padding: 5px;
+    margin-top: 0;
+    color:rgb(159, 197, 58);
+}
+
+.tabla_ClientesPersona table tr td{
+    text-transform: capitalize;
+    text-align: center;
+    padding: 4px 0px;
 }
 
 
 
+/*---------------------------------------- ELEMENTOS RESPONSIVOS ----------------------------------------*/
+.icon__menu{
+    width: 26px;
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+    height: 100%;
+    align-items: center;
+    display: none;
+}
+
+#label__check{
+    width: 26px;
+    height: 100%;
+    display: none;
+}
+
+#check__menu{
+    display: none;
+}
 
 
+@media screen and (max-width: 1050px){
 
+   .container__BorrarPersona form table tr td input{
+        font-weight: 600;
+        font-size: 80%;
+        *background-color: plum;
+    }
+
+    
+    .container__BorrarPersona form table tr td select{
+        font-weight: 600;
+        font-size: 100%;
+        *background-color: plum;
+    }
+    
+    
+    .container__BorrarPersona table tr td select option{
+        font-size: 14px;
+    }
+
+}
+
+
+@media screen and (max-width: 800px){
+
+    /* ----- HEADER RESPONSIVE -----*/
+    .header__superior{
+        padding: 10px;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .logo img{
+        width: 50px;
+    }
+
+    
+    #label__check{
+        display: block;
+    }
+
+    .icon__menu{
+        display: flex;
+    }
+
+    #check__menu:checked ~ nav > ul{
+        height: 300px;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .search h1{
+        margin-top: 14%;
+        font-size: 20px;
+        *background-color: plum;
+    }
+    
+    .search input{
+        display: none;
+    }
+
+    #selected{
+        transform: scale(1);
+    }
+    
+    nav > ul {
+        width: 100%;
+        height: 0px;
+        flex-direction: column;
+        *background-color: #023877;
+        background-color: rgb(0, 147, 180);
+        position: fixed;
+        left: 0;
+        top: 147px;
+        transition: all 200ms ease;
+        z-index: 100;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    nav > ul > li > a:hover{
+        transform: scale(1);
+    }
+
+    nav ul li ul{
+        left: 90px;
+    }
+
+    nav > ul > li:hover > ul{
+        top: 50px;
+    }
+
+    nav > ul > li:first-child a{
+        background-position: 20px;
+    }
+
+    /* ----- MAIN RESPONSIVE -----*/
+    
+    /*BUSCADOR*/
+    .container__BorrarPersona{
+        width: 100%;
+        *background: plum;
+    }
+
+    .container__BorrarPersona h3{
+        font-size: 20px;
+    }
+
+    .container__BorrarPersona form table tr td input{
+        font-size: 16px;
+        padding: 3%;
+        *background-color: plum;
+        margin-top: 10px;
+    }
+
+    .container__BorrarPersona form table tr td select{
+        font-size: 18px;
+        padding: 3%;
+        *background-color: plum;
+        margin-top: 10px;
+    }
+    
+    .container__BorrarPersona table tr td select option{
+        font-size: 18px;
+    }
+    
+    /* CONTENEDOR PRINCIPAL*/
+    .contenedor__principal {
+        display: flex;
+        flex-direction: column;
+        max-height: 1150px;
+    }
+
+    /* TABLA */
+    .tabla_ClientesPersona{
+        width: 100%;
+    }
+    
+    .tabla_ClientesPersona table{
+        padding: 10px; 
+    }
+
+}
