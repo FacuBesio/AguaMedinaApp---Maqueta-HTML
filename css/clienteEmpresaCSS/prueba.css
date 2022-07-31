@@ -199,7 +199,7 @@ main{
 }
 
 /* ----- BORRAR PERSONAS -----*/
-.container__BorrarPersona{
+.container__BorrarRecorrido{
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -213,10 +213,10 @@ main{
     background-color:#fff;
 }
 
-.container__BorrarPersona form table tr td input{
+.container__BorrarRecorrido form table tr td input{
     width: 50%;
     height: 90%;
-    padding: 15px; 
+    padding: 10px; 
     font-size: 22px;
     font-weight: bolder;
     font-weight: 600;
@@ -227,7 +227,7 @@ main{
     *background-color: plum;
 }
 
-.container__BorrarPersona form table tr td select{
+.container__BorrarRecorrido form table tr td select{
     width: 85%;
     height: 75%;
     padding: 10px; 
@@ -238,13 +238,13 @@ main{
     border-color: #f0f0f0;
 }
 
-.container__BorrarPersona table tr td select option{
+.container__BorrarRecorrido table tr td select option{
     font-size: 18px; 
     font-weight: 600;
 }
 
-/* SELECTOR DE PERSONAS */
-.container_SelectorPersona{
+/* SELECTOR DE RECORRIDOS */
+.container_SelectorRecorrido{
     width: 100%;
     height: 50%;
     *padding: 10% 0px;
@@ -257,12 +257,12 @@ main{
     *background-color:orange;
 }
 
-.container_SelectorPersona form{
+.container_SelectorRecorrido form{
     height: 100%;
     border-radius: 0.5em;
 }
 
-.container_SelectorPersona table{
+.container_SelectorRecorrido table{
     width: 100%;
     height: 100%;
     padding: 5% 0px;
@@ -270,7 +270,7 @@ main{
     *background-color: blueviolet;
 }
 
-.container_SelectorPersona table tr td h2{
+.container_SelectorRecorrido table tr td h2{
     font-size: 26px;
     font-weight: 800;
     *background-color: plum;
@@ -327,7 +327,7 @@ main{
 
 
 /* ----- TABLA -----*/
-.tabla_ClientesPersona{
+.tabla_Recorridos{
     width: 50%;
     *height: 600px;
     background-color: white;
@@ -336,19 +336,19 @@ main{
     overflow-x: scroll;
 }
 
-.tabla_ClientesPersona::-webkit-scrollbar{
+.tabla_Recorridos::-webkit-scrollbar{
     width: 7px;
     height: 7px;
 }
 
-.tabla_ClientesPersona::-webkit-scrollbar-thumb{
+.tabla_Recorridos::-webkit-scrollbar-thumb{
     background-color: rgb(159, 186, 196);
     border-radius: 0.5em;
     
 }
 
-.tabla_ClientesPersona table{
-    width: 2400px;
+.tabla_Recorridos table{
+    width: 1400px;
     *height: 100%;
     color: rgb(0, 147, 180);
     text-align: center;
@@ -358,7 +358,7 @@ main{
     border-radius: 0.5em;
 }
 
-.tabla_ClientesPersona table tr th{
+.tabla_Recorridos table tr th{
     text-transform: uppercase;
     text-align: center;
     font-weight: bolder;
@@ -369,7 +369,7 @@ main{
     color:rgb(159, 197, 58);
 }
 
-.tabla_ClientesPersona table tr td{
+.tabla_Recorridos table tr td{
     text-transform: capitalize;
     text-align: center;
     padding: 4px 0px;
@@ -401,24 +401,10 @@ main{
 
 @media screen and (max-width: 1050px){
 
-   .container__BorrarPersona form table tr td input{
-        font-weight: 600;
-        font-size: 80%;
-        *background-color: plum;
+    .container_Confirmacion table tr td h2{
+        font-size: 26px;
     }
-
-    
-    .container__BorrarPersona form table tr td select{
-        font-weight: 600;
-        font-size: 100%;
-        *background-color: plum;
-    }
-    
-    
-    .container__BorrarPersona table tr td select option{
-        font-size: 14px;
-    }
-
+  
 }
 
 
@@ -502,30 +488,30 @@ main{
     /* ----- MAIN RESPONSIVE -----*/
     
     /*BUSCADOR*/
-    .container__BorrarPersona{
+    .container__BorrarRecorrido{
         width: 100%;
         *background: plum;
     }
 
-    .container__BorrarPersona h3{
+    .container__BorrarRecorrido h3{
         font-size: 20px;
     }
 
-    .container__BorrarPersona form table tr td input{
+    .container__BorrarRecorrido form table tr td input{
         font-size: 16px;
         padding: 3%;
         *background-color: plum;
         margin-top: 10px;
     }
 
-    .container__BorrarPersona form table tr td select{
+    .container__BorrarRecorrido form table tr td select{
         font-size: 18px;
         padding: 3%;
         *background-color: plum;
         margin-top: 10px;
     }
     
-    .container__BorrarPersona table tr td select option{
+    .container__BorrarRecorrido table tr td select option{
         font-size: 18px;
     }
     
@@ -537,12 +523,38 @@ main{
     }
 
     /* TABLA */
-    .tabla_ClientesPersona{
+    .tabla_Recorridos{
         width: 100%;
     }
     
-    .tabla_ClientesPersona table{
+    .tabla_Recorridos table{
         padding: 10px; 
     }
 
+}
+
+@media screen and (max-width: 380px){
+    .container__BorrarRecorrido form table tr td input{
+        font-size: 16px;
+    }
+    
+    .container__BorrarRecorrido form table tr td select{
+        font-size: 16px;
+    }
+
+    .container_SelectorRecorrido table tr td h2{
+        font-size: 22px;
+    }
+
+    .container_Confirmacion table tr td h2{
+        font-size: 26px;
+    }
+
+    .container_Confirmacion table tr td h3{
+        font-size: 22px;
+    }
+
+    .container_Confirmacion table tr td h2{
+        font-size: 22px;
+    }
 }

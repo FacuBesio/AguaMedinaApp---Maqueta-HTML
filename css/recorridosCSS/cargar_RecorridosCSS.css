@@ -74,7 +74,7 @@ nav ul li{
 }
 
 nav > ul > li:first-child > a{
-    background-image: url(../imagenes/home.png);
+    background-image: url(../../imagenes/home.png);
     background-size: 24px;
     background-repeat: no-repeat;
     background-position: center center;
@@ -83,7 +83,7 @@ nav > ul > li:first-child > a{
 }
 
 nav > ul > li:first-child:hover > a{
-    background-image: url(../imagenes/home.png);
+    background-image: url(../../imagenes/home.png);
     background-size: 24px;
     background-repeat: no-repeat;
     background-position: center center;
@@ -100,7 +100,6 @@ nav > ul > li > a{
     font-weight: 600;
     transition: all 200ms ease;
     color: #fff;
-    *background-color: plum;
 }
 
 nav > ul > li > a:hover{
@@ -195,53 +194,53 @@ main{
     border-radius: 0.5em;
     display: flex;
     gap: 1em;
+    max-height: 700px;
     *background: plum;
 }
 
-/* ----- CONTAINER MAIN IZQUIERDO -----*/
-.container__mainIzquierdo{
-    width: 50%;
-    border-radius: 0.5em;
+/* ----- CARGAR RECORRIDOS -----*/
+.container__cargarRecorrido{
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+    width: 35%;
+    border-radius: 0.5em;
     align-items: center;
     text-align: center;
     color: white;
     *background-color:aquamarine;
     *background-color: rgb(0, 147, 180);
-    *background-color: rgb(85, 168, 196);
-    background-color: rgb(122,198,224);
+    background-color: rgb(85, 168, 196);
 }
 
-.container__mainIzquierdo table{
+.container__cargarRecorrido form{
     width: 100%;
     height: 100%;
-    padding: 20px 5px;
+    *background-color: coral;
+}
+
+.container__cargarRecorrido table{
+    width: 100%;
+    height: 100%;
     *background-color: orange;
     
 }
 
-.container__mainIzquierdo table tr td h2{
-    font-size: 22px;
-    font-weight: bolder;
-    *text-align: left;
-    *padding: 0px 0px;
+.container__cargarRecorrido table tr td h2{
+    padding-top: 10px;
+    font-size: 24px;
+    font-weight: 800;
+    *padding-bottom: 5px;
+    *background-color: plum;
 }
 
-.container__mainIzquierdo table tr td h3{
-    margin-top: 10px;
-    font-size: 22px;
-    *background-color: aquamarine;
-}
-
-
-.container__mainIzquierdo table tr td h4{
-    padding: 10px;
-    font-size: 18px;
+.container__cargarRecorrido table tr td h3{
+    padding: 10px 2px;
+    margin-top: 5px;
+    font-size: 20px;
     *background-color: plum;
 }
 
 
-.container__mainIzquierdo table tr td a{
+.container__cargarRecorrido table tr td a{
     color: white;
     text-transform: uppercase;
     font-weight: bolder;
@@ -252,43 +251,85 @@ main{
 }
 
 
-/* ----- CONTAINER MAIN DERECHO -----*/
-.container__mainDerecho{
-    width: 50%;
-    border-radius: 0.5em;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
-    align-items: center;
+
+.container__cargarRecorrido table tr td input{
+    width: 85%;
+    padding: 15px;
+    font-size: 16px;
     text-align: center;
-    color: white;
-    *background-color:aquamarine;
-    *background-color: rgb(0, 147, 180);
-    background-color: rgb(85, 168, 196);
-    *background-color: rgb(122,198,224);
-}
-
-
-
-.container__mainDerecho table{
-    width: 100%;
-    height: 100%;
-    padding: 175px 10px;
-    *background-color: orange;
-}
-
-
-.container__mainDerecho tr td{
-    font-weight: bolder;
-    font-size: 30px;
-    text-transform: capitalize;
+    font-weight: 600;
+    *font-weight: bolder;
     *background-color: aquamarine;
+    border-radius: 0.5em;
+    border-color: #f0f0f0;
 }
 
 
-.tabla_ClientesPersona table tr td{
+
+.container__cargarRecorrido table tr td select{
+    width: 85%;
+    padding: 15px;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: bolder;
+    font-size: 16px;
+    border-radius: 0.5em;
+    border-color: #f0f0f0;
+}
+
+.container__cargarRecorrido table tr td select option{
+    font-size: 16px; 
+    font-weight: 600;
+}
+
+/* ----- TABLA -----*/
+.tabla_Recorridos{
+    width: 80%;
+    *height: auto;
+    background-color: white;
+    *background-color: coral;
+    overflow-y: scroll;
+    overflow-x: scroll;
+}
+
+.tabla_Recorridos::-webkit-scrollbar{
+    width: 7px;
+    height: 7px;
+}
+
+.tabla_Recorridos::-webkit-scrollbar-thumb{
+    background-color: rgb(159, 186, 196);
+    border-radius: 0.5em;
+    
+}
+
+.tabla_Recorridos table{
+    width: 1400px;
+    color: rgb(0, 147, 180);
+    text-align: center;
+    background: #f0f0f0;
+    *background-color: coral;
+    padding: 15px 10px;
+    border-radius: 0.5em;
+}
+
+.tabla_Recorridos table tr th{
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 18px;
+    padding-top: 2px;
+    *padding: 5px;
+    margin-top: 0;
+    color:rgb(159, 197, 58);
+}
+
+.tabla_Recorridos table tr td{
     text-transform: capitalize;
     text-align: center;
     padding: 4px 0px;
 }
+
 
 
 /*---------------------------------------- ELEMENTOS RESPONSIVOS ----------------------------------------*/
@@ -312,31 +353,73 @@ main{
     display: none;
 }
 
+@media screen and (max-width: 1050px){
+
+    .container__cargarRecorrido h3{
+        font-size: 16px;
+        *background-color: plum;
+    
+    }
+    
+    .container__cargarRecorrido table tr td input{
+        font-size: 14px;
+        *background-color: plum;
+    }
+
+    .container__cargarRecorrido table tr td select{
+        font-size: 14px;
+        *background-color: plum;
+    }
+
+    .container__cargarRecorrido table tr td select option{
+        font-size: 14px;
+    }
+
+}
+
 @media screen and (max-width: 800px){
 
     /* ----- HEADER RESPONSIVE -----*/
-    .search input{
-        display: none;
-    }
-    
-    .header__superior{
-        padding: 10px;
-    }
-
-    .menu {
+    .menu{
         display: flex;
         justify-content: flex-start;
         align-items: center;
     }
 
-    .logo img{
-        width: 50px;
+    .search input{
+        display: none;
     }
 
     .search h1{
         margin-top: 14%;
         font-size: 20px;
         *background-color: plum;
+    }
+    
+    .header__superior{
+        padding: 10px;
+    }
+
+    .logo img{
+        width: 50px;
+    }
+
+    #selected{
+        transform: scale(1);
+    }
+
+    #label__check{
+        display: block;
+    }
+
+    .icon__menu{
+        display: flex;
+    }
+
+    #check__menu:checked ~ nav > ul{
+        height: 300px;
+        visibility: visible;
+        opacity: 1;
     }
 
     nav > ul {
@@ -370,37 +453,30 @@ main{
         background-position: 20px;
     }
 
-    #selected{
-        transform: scale(1);
-    }
-
-    #label__check{
-        display: block;
-    }
-
-    .icon__menu{
-        display: flex;
-    }
-
-    #check__menu:checked ~ nav > ul{
-        height: 300px;
-        visibility: visible;
-        opacity: 1;
-    }
-
     /* ----- MAIN RESPONSIVE -----*/
+    
+    /* CARGAR PERSONA */
+    .container__cargarRecorrido{
+        width: 100%;
+        *background: plum;
+    }
+    
     .contenedor__principal {
         display: flex;
         flex-direction: column;
         max-height: 1150px;
     }
-
-    .container__mainIzquierdo{
-        width: 100%;
-        *background: plum;
+   
+    .container__cargarRecorrido h3{
+        font-size: 20px;
     }
 
-    .container__mainDerecho{
+    .tabla_Recorridos{
         width: 100%;
     }
+
+   .tabla_Recorridos table{
+        padding: 10px; 
+    }
+
 }

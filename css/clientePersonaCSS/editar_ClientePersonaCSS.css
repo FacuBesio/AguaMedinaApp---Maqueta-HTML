@@ -74,7 +74,7 @@ nav ul li{
 }
 
 nav > ul > li:first-child > a{
-    background-image: url(../imagenes/home.png);
+    background-image: url(../../imagenes/home.png);
     background-size: 24px;
     background-repeat: no-repeat;
     background-position: center center;
@@ -83,7 +83,7 @@ nav > ul > li:first-child > a{
 }
 
 nav > ul > li:first-child:hover > a{
-    background-image: url(../imagenes/home.png);
+    background-image: url(../../imagenes/home.png);
     background-size: 24px;
     background-repeat: no-repeat;
     background-position: center center;
@@ -100,7 +100,6 @@ nav > ul > li > a{
     font-weight: 600;
     transition: all 200ms ease;
     color: #fff;
-    *background-color: plum;
 }
 
 nav > ul > li > a:hover{
@@ -198,50 +197,169 @@ main{
     *background: plum;
 }
 
-/* ----- CONTAINER MAIN IZQUIERDO -----*/
-.container__mainIzquierdo{
+/* ----- EDITAR PERSONAS -----*/
+.container__EditarPersona{
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    border-radius: 0.5em;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-color:plum;
+    *background-color: rgb(0, 147, 180);
+    background-color:#fff;
+}
+
+.container__EditarPersona form table tr td input{
+    width: 50%;
+    height: 90%;
+    padding: 10px; 
+    font-size: 22px;
+    font-weight: bolder;
+    font-weight: 600;
+    border-radius: 0.5em;
+    background-color:rgb(159, 197, 58); 
+    border-color:rgb(183, 206, 53);
+    color: white;
+    *background-color: plum;
+}
+
+.container__EditarPersona form table tr td select{
+    width: 85%;
+    height: 75%;
+    padding: 10px; 
+    text-align: center;
+    font-weight: bolder;
+    font-size: 20px;
+    border-radius: 0.5em;
+    border-color: #f0f0f0;
+}
+
+.container__EditarPersona table tr td select option{
+    font-size: 18px; 
+    font-weight: 600;
+}
+
+/* SELECTOR DE PERSONAS */
+.container_SelectorPersona{
+    width: 100%;
+    height: 50%;
+    *padding: 10% 0px;
+    align-items: center;
+    text-align: center;
     border-radius: 0.5em;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+    *background-color: rgb(85, 168, 196);
+    background-color: rgb(122,198,224);
+    *background-color:orange;
+}
+
+.container_SelectorPersona form{
+    height: 100%;
+    border-radius: 0.5em;
+}
+
+.container_SelectorPersona table{
+    width: 100%;
+    height: 100%;
+    padding: 5% 0px;
+    border-radius: 0.5em;
+    *background-color: blueviolet;
+}
+
+.container_SelectorPersona table tr td h2{
+    font-size: 26px;
+    font-weight: 800;
+    *background-color: plum;
+}
+
+
+/* CONFIRMACION */
+.container_Confirmacion{
+    width: 100%;
+    height: 50%;
+    align-items: center;
+    text-align: center;
+    border-radius: 0.5em;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+    background-color: rgb(85, 168, 196);
+    *background-color:aquamarine;
+}
+
+.container_Confirmacion form{
+    height: 100%;
+    border-radius: 0.5em;
+}
+
+.container_Confirmacion table{
+    width: 100%;
+    height: 100%;
+    padding: 1% 0px;
+    border-radius: 0.5em;
+    *background-color: brown;
+}
+
+
+.container_Confirmacion table tr td h2{
+    font-size: 30px;
+    font-weight: 800;
+    *background-color: plum;
+}
+
+.container_Confirmacion table tr td h3{
+    font-size: 22px;
+    padding: 0px 5px;
+    margin-top: 10px;
+}
+
+.container_Confirmacion form table tr td select{
+    font-size: 22px;
+    text-transform: uppercase;
+}
+.container_Confirmacion form table tr td select option{
+    font-size: 24px;
+    text-transform: uppercase;
+    *background-color: plum;
+}
+
+
+/* ----- FORMULARIO PARA EDITAR PERSONAS -----*/
+.formulario_EditarPersona{
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+    width: 50%;
+    *height: 100%;
+    border-radius: 0.5em;
     align-items: center;
     text-align: center;
     color: white;
     *background-color:aquamarine;
     *background-color: rgb(0, 147, 180);
-    *background-color: rgb(85, 168, 196);
-    background-color: rgb(122,198,224);
+    background-color: rgb(85, 168, 196);
 }
 
-.container__mainIzquierdo table{
+
+
+.formulario_EditarPersona table{
     width: 100%;
-    height: 100%;
-    padding: 20px 5px;
+    *height: 100%;
+    *padding: 10px 0px;
+    height: 80%;
     *background-color: orange;
     
 }
 
-.container__mainIzquierdo table tr td h2{
-    font-size: 22px;
-    font-weight: bolder;
-    *text-align: left;
-    *padding: 0px 0px;
-}
-
-.container__mainIzquierdo table tr td h3{
-    margin-top: 10px;
-    font-size: 22px;
-    *background-color: aquamarine;
-}
-
-
-.container__mainIzquierdo table tr td h4{
-    padding: 10px;
-    font-size: 18px;
+.formulario_EditarPersona table tr td  h2{
+    padding-top: 20px;
+    font-size: 24px;
+    font-weight: 800;
+    padding-bottom: 5px;
+    *background-color: orange;
     *background-color: plum;
 }
 
-
-.container__mainIzquierdo table tr td a{
+.formulario_EditarPersona table tr td a{
     color: white;
     text-transform: uppercase;
     font-weight: bolder;
@@ -251,46 +369,43 @@ main{
     
 }
 
-
-/* ----- CONTAINER MAIN DERECHO -----*/
-.container__mainDerecho{
-    width: 50%;
-    border-radius: 0.5em;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
-    align-items: center;
-    text-align: center;
-    color: white;
-    *background-color:aquamarine;
-    *background-color: rgb(0, 147, 180);
-    background-color: rgb(85, 168, 196);
-    *background-color: rgb(122,198,224);
-}
-
-
-
-.container__mainDerecho table{
+.formulario_EditarPersona form{
     width: 100%;
     height: 100%;
-    padding: 175px 10px;
-    *background-color: orange;
+    *background-color: coral;
+
 }
 
-
-.container__mainDerecho tr td{
-    font-weight: bolder;
-    font-size: 30px;
-    text-transform: capitalize;
-    *background-color: aquamarine;
-}
-
-
-.tabla_ClientesPersona table tr td{
-    text-transform: capitalize;
+.formulario_EditarPersona table tr td input{
+    width: 85%;
+    padding: 7px;
+    margin-top: 5px;
+    font-size: 18px;
     text-align: center;
-    padding: 4px 0px;
+    font-weight: 600;
+    *font-weight: bolder;
+    *background-color: aquamarine;
+    border-radius: 0.5em;
+    border-color: #f0f0f0;
 }
 
 
+
+.formulario_EditarPersona table tr td select{
+    width: 85%;
+    padding: 7px;
+    margin-top: 5px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 18px;
+    border-radius: 0.5em;
+    border-color: #f0f0f0;
+}
+
+.formulario_EditarPersona table tr td select option{
+    font-size: 16px; 
+    font-weight: 600;
+}
 /*---------------------------------------- ELEMENTOS RESPONSIVOS ----------------------------------------*/
 .icon__menu{
     width: 26px;
@@ -312,13 +427,10 @@ main{
     display: none;
 }
 
+
 @media screen and (max-width: 800px){
 
     /* ----- HEADER RESPONSIVE -----*/
-    .search input{
-        display: none;
-    }
-    
     .header__superior{
         padding: 10px;
     }
@@ -333,12 +445,35 @@ main{
         width: 50px;
     }
 
+    
+    #label__check{
+        display: block;
+    }
+
+    .icon__menu{
+        display: flex;
+    }
+
+    #check__menu:checked ~ nav > ul{
+        height: 300px;
+        visibility: visible;
+        opacity: 1;
+    }
+
     .search h1{
         margin-top: 14%;
         font-size: 20px;
         *background-color: plum;
     }
+    
+    .search input{
+        display: none;
+    }
 
+    #selected{
+        transform: scale(1);
+    }
+    
     nav > ul {
         width: 100%;
         height: 0px;
@@ -370,37 +505,74 @@ main{
         background-position: 20px;
     }
 
-    #selected{
-        transform: scale(1);
-    }
-
-    #label__check{
-        display: block;
-    }
-
-    .icon__menu{
-        display: flex;
-    }
-
-    #check__menu:checked ~ nav > ul{
-        height: 300px;
-        visibility: visible;
-        opacity: 1;
-    }
-
     /* ----- MAIN RESPONSIVE -----*/
+    
+    /*BUSCADOR*/
+    .container__EditarPersona{
+        width: 100%;
+        *background: plum;
+    }
+
+    .container__EditarPersona h3{
+        font-size: 20px;
+    }
+
+    .container__EditarPersona form table tr td input{
+        margin-top: 10px;
+        font-size: 18px;
+    }
+
+    .container__EditarPersona form table tr td select{
+        margin-top: 10px;
+        font-size: 16px;
+    }
+    
+    
+    
+    /* CONTENEDOR PRINCIPAL*/
     .contenedor__principal {
         display: flex;
         flex-direction: column;
         max-height: 1150px;
     }
 
-    .container__mainIzquierdo{
+    
+
+    /* TABLA */
+    .formulario_EditarPersona{
         width: 100%;
-        *background: plum;
+    }
+    
+    .formulario_EditarPersona table{
+        padding: 10px; 
     }
 
-    .container__mainDerecho{
-        width: 100%;
+}
+
+@media screen and (max-width: 380px){
+    .container__EditarPersona form table tr td input{
+        font-size: 14px;
     }
+
+    .formulario_EditarPersona table tr td select{
+        font-size: 16px;
+    }
+
+    .container_SelectorPersona table tr td h2{
+        font-size: 22px;
+    }
+
+    .container_Confirmacion table tr td h2{
+        font-size: 26px;
+    }
+
+    .formulario_EditarPersona table tr td h2{
+        font-size: 22px;
+    }
+
+    .formulario_EditarPersona table tr td input{
+        font-size: 16px;
+    }
+
+    
 }

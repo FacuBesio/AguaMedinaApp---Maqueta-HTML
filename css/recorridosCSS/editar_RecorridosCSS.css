@@ -194,15 +194,145 @@ main{
     border-radius: 0.5em;
     display: flex;
     gap: 1em;
-    max-height: 700px;
     *background: plum;
 }
 
-/* ----- CLIENTES PERSONAS -----*/
-.container__main_ClientesPersona{
+/* ----- EDITAR RECORRIDOS -----*/
+.container__EditarRecorrido{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    border-radius: 0.5em;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-color:plum;
+    *background-color: rgb(0, 147, 180);
+    background-color:#fff;
+}
+
+.container__EditarRecorrido form table tr td input{
+    width: 50%;
+    height: 90%;
+    padding: 15px; 
+    margin-top: 15px;
+    font-size: 22px;
+    font-weight: bolder;
+    font-weight: 600;
+    border-radius: 0.5em;
+    background-color:rgb(159, 197, 58); 
+    border-color:rgb(183, 206, 53);
+    color: white;
+    *background-color: plum;
+}
+
+.container__EditarRecorrido form table tr td select{
+    width: 85%;
+    height: 75%;
+    padding: 15px; 
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 20px;
+    border-radius: 0.5em;
+    border-color: #f0f0f0;
+}
+
+.container__EditarRecorrido table tr td select option{
+    font-size: 18px; 
+    font-weight: 600;
+}
+
+/* SELECTOR DE RECORRIDOS */
+.container_SelectorRecorrido{
+    width: 100%;
+    height: 50%;
+    *padding: 10% 0px;
+    align-items: center;
+    text-align: center;
+    border-radius: 0.5em;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
-    width: 35%;
+    *background-color: rgb(85, 168, 196);
+    background-color: rgb(122,198,224);
+    *background-color:orange;
+}
+
+.container_SelectorRecorrido form{
+    height: 100%;
+    border-radius: 0.5em;
+}
+
+.container_SelectorRecorrido table{
+    width: 100%;
+    height: 100%;
+    padding: 5% 0px;
+    border-radius: 0.5em;
+    *background-color: blueviolet;
+}
+
+.container_SelectorRecorrido table tr td h2{
+    font-size: 26px;
+    font-weight: 800;
+    *background-color: plum;
+}
+
+
+/* CONFIRMACION */
+.container_Confirmacion{
+    width: 100%;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+    border-radius: 0.5em;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+    background-color: rgb(85, 168, 196);
+    *background-color:aquamarine;
+}
+
+.container_Confirmacion form{
+    height: 100%;
+    border-radius: 0.5em;
+}
+
+.container_Confirmacion table{
+    width: 100%;
+    height: 100%;
+    padding: 1% 0px;
+    border-radius: 0.5em;
+    *background-color: brown;
+}
+
+
+.container_Confirmacion table tr td h2{
+    font-size: 30px;
+    font-weight: 800;
+    *background-color: plum;
+}
+
+.container_Confirmacion table tr td h3{
+    font-size: 22px;
+    padding: 0px 5px;
+    margin-top: 10px;
+}
+
+.container_Confirmacion form table tr td select{
+    font-size: 22px;
+    text-transform: uppercase;
+}
+.container_Confirmacion form table tr td select option{
+    font-size: 24px;
+    text-transform: uppercase;
+    *background-color: plum;
+}
+
+
+/* ----- FORMULARIO PARA EDITAR RECORRIDOS -----*/
+.formulario_EditarRecorrido{
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+    width: 50%;
     *height: 100%;
+    padding-top: 20px;
     border-radius: 0.5em;
     align-items: center;
     text-align: center;
@@ -212,36 +342,27 @@ main{
     background-color: rgb(85, 168, 196);
 }
 
-.container__main_ClientesPersona table{
+
+
+.formulario_EditarRecorrido table{
     width: 100%;
-    height: 100%;
-    padding: 15px 5px;
+    *height: 100%;
+    *padding: 10px 0px;
+    height: 80%;
     *background-color: orange;
     
 }
 
-.container__main_ClientesPersona table tr td h2{
-    font-size: 22px;
-    font-weight: bolder;
-    *text-align: left;
-    *padding: 0px 0px;
-}
-
-.container__main_ClientesPersona table tr td h3{
-    margin-top: 10px;
-    font-size: 22px;
-    *background-color: aquamarine;
-}
-
-
-.container__main_ClientesPersona table tr td h4{
-    padding: 10px;
-    font-size: 18px;
+.formulario_EditarRecorrido table tr td  h2{
+    padding-top: 20px;
+    font-size: 24px;
+    font-weight: 800;
+    padding-bottom: 5px;
+    *background-color: orange;
     *background-color: plum;
 }
 
-
-.container__main_ClientesPersona table tr td a{
+.formulario_EditarRecorrido table tr td a{
     color: white;
     text-transform: uppercase;
     font-weight: bolder;
@@ -251,59 +372,44 @@ main{
     
 }
 
-
-/* ----- TABLA -----*/
-.tabla_ClientesPersona{
-    width: 80%;
-    background-color: white;
+.formulario_EditarRecorrido form{
+    width: 100%;
+    height: 100%;
     *background-color: coral;
-    overflow-y: scroll;
-    overflow-x: scroll;
+
 }
 
-.tabla_ClientesPersona::-webkit-scrollbar{
-    width: 7px;
-    height: 7px;
-}
-
-.tabla_ClientesPersona::-webkit-scrollbar-thumb{
-    background-color: rgb(159, 186, 196);
-    border-radius: 0.5em;
-    
-}
-
-
-
-.tabla_ClientesPersona table{
-    width: 2400px;
-    color: rgb(0, 147, 180);
+.formulario_EditarRecorrido table tr td input{
+    width: 85%;
+    padding: 15px;
+    margin-top: 10px;
+    font-size: 22px;
     text-align: center;
-    background: #f0f0f0;
-    *background-color: coral;
-    padding: 15px 10px;
+    font-weight: 600;
+    *font-weight: bolder;
+    *background-color: aquamarine;
     border-radius: 0.5em;
+    border-color: #f0f0f0;
 }
 
-.tabla_ClientesPersona table tr th{
-    text-transform: uppercase;
+
+
+.formulario_EditarRecorrido table tr td select{
+    width: 85%;
+    padding: 15px;
+    margin-top: 10px;
     text-align: center;
     font-weight: bolder;
-    font-size: 18px;
-    padding-top: 2px;
-    *padding: 5px;
-    margin-top: 0;
-    color:rgb(159, 197, 58);
-    
-}
-
-.tabla_ClientesPersona table tr td{
+    font-size: 22px;
     text-transform: capitalize;
-    text-align: center;
-    padding: 4px 0px;
+    border-radius: 0.5em;
+    border-color: #f0f0f0;
 }
 
-
-
+.formulario_EditarRecorrido table tr td select option{
+    font-size: 16px; 
+    font-weight: 600;
+}
 /*---------------------------------------- ELEMENTOS RESPONSIVOS ----------------------------------------*/
 .icon__menu{
     width: 26px;
@@ -325,37 +431,25 @@ main{
     display: none;
 }
 
+
 @media screen and (max-width: 800px){
 
     /* ----- HEADER RESPONSIVE -----*/
+    .header__superior{
+        padding: 10px;
+    }
+
     .menu {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-    }
-    
-    .search input{
-        display: none;
-    }
-
-    .search h1{
-        margin-top: 14%;
-        font-size: 20px;
-        *background-color: plum;
-    }
-    
-    .header__superior{
-        padding: 10px;
     }
 
     .logo img{
         width: 50px;
     }
 
-    #selected{
-        transform: scale(1);
-    }
-
+    
     #label__check{
         display: block;
     }
@@ -370,6 +464,20 @@ main{
         opacity: 1;
     }
 
+    .search h1{
+        margin-top: 14%;
+        font-size: 20px;
+        *background-color: plum;
+    }
+    
+    .search input{
+        display: none;
+    }
+
+    #selected{
+        transform: scale(1);
+    }
+    
     nav > ul {
         width: 100%;
         height: 0px;
@@ -401,26 +509,75 @@ main{
         background-position: 20px;
     }
 
-    
     /* ----- MAIN RESPONSIVE -----*/
-    .container__main_ClientesPersona{
+    
+    /*BUSCADOR*/
+    .container__EditarRecorrido{
         width: 100%;
         *background: plum;
     }
 
-    .tabla_ClientesPersona{
+    .container__EditarRecorrido h3{
+        font-size: 20px;
+    }
+
+    .container__EditarRecorrido form table tr td input{
+        margin-top: 10px;
+        font-size: 18px;
+    }
+
+    .container__EditarRecorrido form table tr td select{
+        margin-top: 10px;
+        font-size: 16px;
+    }
+    
+    
+    
+    /* CONTENEDOR PRINCIPAL*/
+    .contenedor__principal {
+        display: flex;
+        flex-direction: column;
+        max-height: 1150px;
+    }
+
+    
+
+    /* TABLA */
+    .formulario_EditarRecorrido{
         width: 100%;
     }
     
-    .contenedor__principal {
-       display: flex;
-       flex-direction: column;
-       max-height: 1150px;
-   }
-
-   .tabla_ClientesPersona table{
+    .formulario_EditarRecorrido table{
         padding: 10px; 
+    }
+
+}
+
+@media screen and (max-width: 380px){
+    .container__EditarRecorrido form table tr td input{
+        font-size: 14px;
+    }
+
+    .formulario_EditarRecorrido table tr td select{
+        font-size: 16px;
+    }
+
+    .container_SelectorRecorrido table tr td h2{
+        font-size: 22px;
+    }
+
+    .container_Confirmacion table tr td h2{
+        font-size: 26px;
+    }
+
+    .formulario_EditarRecorrido table tr td h2{
+        font-size: 22px;
+    }
+
+    .formulario_EditarRecorrido table tr td input{
+        font-size: 16px;
     }
 
     
 }
+

@@ -74,7 +74,7 @@ nav ul li{
 }
 
 nav > ul > li:first-child > a{
-    background-image: url(../imagenes/home.png);
+    background-image: url(../../imagenes/home.png);
     background-size: 24px;
     background-repeat: no-repeat;
     background-position: center center;
@@ -83,7 +83,7 @@ nav > ul > li:first-child > a{
 }
 
 nav > ul > li:first-child:hover > a{
-    background-image: url(../imagenes/home.png);
+    background-image: url(../../imagenes/home.png);
     background-size: 24px;
     background-repeat: no-repeat;
     background-position: center center;
@@ -100,7 +100,6 @@ nav > ul > li > a{
     font-weight: 600;
     transition: all 200ms ease;
     color: #fff;
-    *background-color: plum;
 }
 
 nav > ul > li > a:hover{
@@ -195,100 +194,170 @@ main{
     border-radius: 0.5em;
     display: flex;
     gap: 1em;
+    max-height: 700px;
     *background: plum;
 }
 
-/* ----- CONTAINER MAIN IZQUIERDO -----*/
-.container__mainIzquierdo{
-    width: 50%;
+/* ----- BUSCADOR RECORRIDOS -----*/
+.container__Buscador{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
     border-radius: 0.5em;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
     align-items: center;
     text-align: center;
     color: white;
-    *background-color:aquamarine;
+    background-color:plum;
     *background-color: rgb(0, 147, 180);
+    background-color:#fff;
+}
+
+.container__Buscador form table tr td input{
+    width: 50%;
+    height: 75%;
+    padding: 10px; 
+    font-size: 18px;
+    font-weight: bolder;
+    font-weight: 600;
+    border-radius: 0.5em;
+    background-color:rgb(159, 197, 58); 
+    border-color:rgb(183, 206, 53);
+    color: white;
+    *background-color: plum;
+}
+
+.container__Buscador form table tr td select{
+    width: 85%;
+    height: 75%;
+    padding: 10px; 
+    text-align: center;
+    font-weight: bolder;
+    font-size: 18px;
+    border-radius: 0.5em;
+    border-color: #f0f0f0;
+}
+
+.container__Buscador table tr td select option{
+    font-size: 18px; 
+    font-weight: 600;
+}
+
+/* SELECTOR DE FILTRO */
+.container_Selector_filtro{
+    width: 100%;
+    height: 50%;
+    *padding: 10% 0px;
+    align-items: center;
+    text-align: center;
+    border-radius: 0.5em;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
     *background-color: rgb(85, 168, 196);
     background-color: rgb(122,198,224);
+    *background-color:orange;
 }
 
-.container__mainIzquierdo table{
+.container_Selector_filtro form{
+    height: 100%;
+    border-radius: 0.5em;
+}
+
+.container_Selector_filtro table{
     width: 100%;
     height: 100%;
-    padding: 20px 5px;
-    *background-color: orange;
-    
+    padding: 10% 0px;
+    border-radius: 0.5em;
+    *background-color: blueviolet;
 }
 
-.container__mainIzquierdo table tr td h2{
-    font-size: 22px;
-    font-weight: bolder;
-    *text-align: left;
-    *padding: 0px 0px;
-}
-
-.container__mainIzquierdo table tr td h3{
-    margin-top: 10px;
-    font-size: 22px;
-    *background-color: aquamarine;
-}
-
-
-.container__mainIzquierdo table tr td h4{
-    padding: 10px;
-    font-size: 18px;
+.container_Selector_filtro table tr td h2{
+    font-size: 26px;
+    font-weight: 800;
     *background-color: plum;
 }
 
 
-.container__mainIzquierdo table tr td a{
-    color: white;
-    text-transform: uppercase;
-    font-weight: bolder;
-    font-size: 18px;
-    *background-color: aquamarine;
-    text-decoration: underline;
+
+/* FILTRO */
+.container_Filtro{
+    width: 100%;
+    height: 50%;
+    align-items: center;
+    text-align: center;
+    border-radius: 0.5em;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+    background-color: rgb(85, 168, 196);
+    *background-color:aquamarine;
+}
+
+.container_Filtro form{
+    height: 100%;
+    border-radius: 0.5em;
+}
+
+.container_Filtro table{
+    width: 100%;
+    height: 100%;
+    padding: 10% 0px;
+    border-radius: 0.5em;
+    *background-color: brown;
+}
+
+.container_Filtro table tr td h2{
+    font-weight: 800;
+    *background-color: plum;
+}
+
+
+/* ----- TABLA -----*/
+.tabla_Recorridos{
+    width: 80%;
+    *height: auto;
+    background-color: white;
+    *background-color: coral;
+    overflow-y: scroll;
+    overflow-x: scroll;
+}
+
+.tabla_Recorridos::-webkit-scrollbar{
+    width: 7px;
+    height: 7px;
+}
+
+.tabla_Recorridos::-webkit-scrollbar-thumb{
+    background-color: rgb(159, 186, 196);
+    border-radius: 0.5em;
     
 }
 
-
-/* ----- CONTAINER MAIN DERECHO -----*/
-.container__mainDerecho{
-    width: 50%;
-    border-radius: 0.5em;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
-    align-items: center;
+.tabla_Recorridos table{
+    width: 1400px;
+    *height: 100%;
+    color: rgb(0, 147, 180);
     text-align: center;
-    color: white;
-    *background-color:aquamarine;
-    *background-color: rgb(0, 147, 180);
-    background-color: rgb(85, 168, 196);
-    *background-color: rgb(122,198,224);
+    background: #f0f0f0;
+    *background-color: coral;
+    padding: 15px 10px;
+    border-radius: 0.5em;
 }
 
-
-
-.container__mainDerecho table{
-    width: 100%;
-    height: 100%;
-    padding: 175px 10px;
-    *background-color: orange;
-}
-
-
-.container__mainDerecho tr td{
+.tabla_Recorridos table tr th{
+    text-transform: uppercase;
+    text-align: center;
     font-weight: bolder;
-    font-size: 30px;
-    text-transform: capitalize;
-    *background-color: aquamarine;
+    font-size: 18px;
+    padding-top: 2px;
+    *padding: 5px;
+    margin-top: 0;
+    color:rgb(159, 197, 58);
 }
 
-
-.tabla_ClientesPersona table tr td{
+.tabla_Recorridos table tr td{
     text-transform: capitalize;
     text-align: center;
     padding: 4px 0px;
 }
+
 
 
 /*---------------------------------------- ELEMENTOS RESPONSIVOS ----------------------------------------*/
@@ -312,13 +381,33 @@ main{
     display: none;
 }
 
+
+@media screen and (max-width: 1050px){
+
+   .container__Buscador form table tr td input{
+        font-weight: 600;
+        font-size: 80%;
+        *background-color: plum;
+    }
+
+    
+    .container__Buscador form table tr td select{
+        font-weight: 600;
+        font-size: 100%;
+        *background-color: plum;
+    }
+    
+    
+    .container__Buscador table tr td select option{
+        font-size: 14px;
+    }
+
+}
+
+
 @media screen and (max-width: 800px){
 
     /* ----- HEADER RESPONSIVE -----*/
-    .search input{
-        display: none;
-    }
-    
     .header__superior{
         padding: 10px;
     }
@@ -333,12 +422,35 @@ main{
         width: 50px;
     }
 
+    
+    #label__check{
+        display: block;
+    }
+
+    .icon__menu{
+        display: flex;
+    }
+
+    #check__menu:checked ~ nav > ul{
+        height: 300px;
+        visibility: visible;
+        opacity: 1;
+    }
+
     .search h1{
         margin-top: 14%;
         font-size: 20px;
         *background-color: plum;
     }
+    
+    .search input{
+        display: none;
+    }
 
+    #selected{
+        transform: scale(1);
+    }
+    
     nav > ul {
         width: 100%;
         height: 0px;
@@ -370,37 +482,52 @@ main{
         background-position: 20px;
     }
 
-    #selected{
-        transform: scale(1);
+    /* ----- MAIN RESPONSIVE -----*/
+    
+    /*BUSCADOR*/
+    .container__Buscador{
+        width: 100%;
+        *background: plum;
     }
 
-    #label__check{
-        display: block;
+    .container__Buscador h3{
+        font-size: 20px;
     }
 
-    .icon__menu{
+    .container__Buscador form table tr td input{
+        font-size: 16px;
+        padding: 3%;
+        *background-color: plum;
+        margin-top: 10px;
+    }
+
+    .container__Buscador form table tr td select{
+        font-size: 18px;
+        padding: 3%;
+        *background-color: plum;
+        margin-top: 10px;
+    }
+    
+    .container__Buscador table tr td select option{
+        font-size: 18px;
+        text-align: center;
         display: flex;
     }
-
-    #check__menu:checked ~ nav > ul{
-        height: 300px;
-        visibility: visible;
-        opacity: 1;
-    }
-
-    /* ----- MAIN RESPONSIVE -----*/
+    
+    /* CONTENEDOR PRINCIPAL*/
     .contenedor__principal {
         display: flex;
         flex-direction: column;
         max-height: 1150px;
     }
 
-    .container__mainIzquierdo{
+    /* TABLA */
+    .tabla_Recorridos{
         width: 100%;
-        *background: plum;
+    }
+    
+    .tabla_Recorridos table{
+        padding: 10px; 
     }
 
-    .container__mainDerecho{
-        width: 100%;
-    }
 }
