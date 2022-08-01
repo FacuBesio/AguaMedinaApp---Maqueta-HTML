@@ -5,11 +5,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>AguaMedina App - Empresas</title>
+        <title>AguaMedina App - Cargar Empresas</title>
         <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
     
         <!-- CSS -->
-        <link rel="stylesheet" href="../../css/clienteEmpresaCSS/Home_ClienteEmpresaCSS.css">
+        <link rel="stylesheet" href="../../css/clienteEmpresaCSS/cargar_ClienteEmpresaCSS.css">
     
         <!-- GoogleFonts -->
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,
@@ -84,33 +84,77 @@
             <!-- CONTENEDOR PRINCIPAL -->
             <div class="contenedor__principal">
 
-                <!-- CLIENTES EMPRESA -->
-                <div class="container__main_ClientesEmpresa">
-                    <table>
-                        
-                        <tr><td><a href="buscar_ClientesPersona.jsp?buscarDia=Lunes">Lunes</a></td></tr>
-                        <tr><td><h4> Empresas: - Bidones: - Maquinas: </h4></td></tr>
-                        
-                        <tr><td><a href="buscar_ClientesPersona.jsp?buscarDia=Martes">Martes</a></td></tr>
-                        <tr><td><h4> Empresas: - Bidones: - Maquinas: </h4></td></tr>
-    
-                        <tr><td><a href="buscar_ClientesPersona.jsp?buscarDia=Miercoles">Miercoles</a></td></tr>
-                        <tr><td><h4> Empresas: - Bidones: - Maquinas: </h4></td></tr>
-    
-                        <tr><td><a href="buscar_ClientesPersona.jsp?buscarDia=Jueves">Jueves</a></td></tr>
-                        <tr><td><h4> Empresas: - Bidones: - Maquinas: </h4></td></tr>
-    
-                        <tr><td><a href="buscar_ClientesPersona.jsp?buscarDia=Viernes">Viernes</a></td></tr>
-                        <tr><td><h4> Empresas: - Bidones: - Maquinas: </h4></td></tr>
-    
-                        <tr><td><a href="buscar_ClientesPersona.jsp?buscarDia=Sabados">Sabados</a></td></tr>
-                        <tr><td><h4> Empresas: - Bidones: - Maquinas: </h4></td></tr>
-                        
-                        <tr><td><h3>TOTAL EMPRESAS:</h3></td></tr>
-                        <tr><td><h2 style="color: rgb(159, 197, 58);">BIDONES: </h2></td></tr>
-                        <tr><td><h2 style="color: rgb(159, 197, 58);">MAQUINAS: </h2></td></tr>
-                        
-                    </table>
+                <!-- CARGAR PERSONA -->
+                <div class="container__cargarEmpresa">
+                    
+                    <form>
+                        <table>
+                            <tr>
+                                <td>
+                                    <h2> CARGAR EMPRESA </h2>
+                                </td>
+                            </tr>
+                            <tr><td><input type="text" name="razon_social" maxlength="35" placeholder="Razon Social">   </td></tr>
+                            <tr><td><input type="text" name="cuit" maxlength="15" placeholder="CUIT">                   </td></tr>
+                            <tr><td><input type="text" name="direccion" maxlength="35" placeholder="Direccion">     </td></tr>
+                            <tr><td><input type="text" name="localidad" maxlength="35" placeholder="Localidad">     </td></tr>
+                            <tr><td><input type="text" name="contacto" maxlength="20" placeholder="Contacto">       </td></tr>
+                            <tr><td>
+                                    <select name="tipo_servicio">
+                                        <option disabled="" selected="true">Seleccione un Tipo de Servicio</option>
+                                        <option>Bidon 12 lts</option>
+                                        <option>Bidon 20 lts</option>
+                                        <option>Servicio Agua</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr><td><input type="number" min="0" max="1000" name="bidones" placeholder="Bidones">   </td></tr>
+                            <tr><td><input type="number" min="0" max="1000" name="maquinas" placeholder="Maquinas"> </td></tr>
+                            <tr><td><input type="number" min="0" max="10000000" name="precio" placeholder="Precio ($)">  </td></tr>
+                            <tr><td>
+                                    <select name="idRecorrido">
+                                        <option disabled="" selected="true">Seleccione un Recorrido</option>
+                                        <option disabled=""> Cargue un Recorrido por favor </option>
+                                        <option> Opcion de Recorrido Prueba Maqueta Html</option>");
+                                    </select>
+                                </td></tr>
+                            <tr><td><input type="text" maxlength="50" name="mail" placeholder="Mail">                 </td></tr>
+                            <tr><td><input type="text" maxlength="10" name="fecha_alta" placeholder="Fecha Alta">     </td></tr>
+                            <tr><td><input type="text" maxlength="35" name="detalles" placeholder="Detalles">         </td></tr>
+                            <tr>
+                                <td><input  type="reset" 
+                                            value="RESET" 
+                                            style=" width: 42%;  
+                                                    height: 100%;  
+                                                    padding: 8px; 
+                                                    background-color:rgb(159, 197, 58);
+                                                    border-color:rgb(183, 206, 53);
+                                                    color: white;
+                                                    margin-top: 11px;
+                                                    font-weight: bolder;"/>  
+                                
+                                <input  type="submit" 
+                                            value="GUARDAR" 
+                                            style=" width: 42%;
+                                                    height: 100%;
+                                                    margin-top: 11px;
+                                                    font-weight: bolder;
+                                                    padding: 8px; 
+                                                    text-align: center;
+                                                    background-color:rgb(159, 197, 58);
+                                                    border-color:rgb(183, 206, 53);
+                                                    color: white;"/>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>Se guardo exitosamente la Empresa: 01 AguaMedina, Villa Nueva - Madero 268 
+                                        
+                                    </h3>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
                 </div>
                     
                 <!-- TABLA -->

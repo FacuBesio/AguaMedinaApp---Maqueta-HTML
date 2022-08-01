@@ -5,11 +5,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>AguaMedina App - Editar Personas</title>
+        <title>AguaMedina App - Editar Empresas</title>
         <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
     
         <!-- CSS -->
-        <link rel="stylesheet" href="../../css/clientePersonaCSS/editar_ClientePersonaCSS.css">
+        <link rel="stylesheet" href="../../css/clienteEmpresaCSS/editar_ClienteEmpresaCSS.css">
     
         <!-- GoogleFonts -->
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,
@@ -56,21 +56,21 @@
                                 </ul>
                             </li>
                             
-                            <li><a href="Home_ClientesPersona.html" id="selected">Personas</a>
+                            <li><a href="../clientesPersona/Home_ClientesPersona.html">Personas</a>
                                 <ul>
-                                    <li><a href="cargar_ClientesPersona.html">Cargar Personas</a></li>
-                                    <li><a href="buscar_ClientesPersona.html">Buscar Personas</a></li>
-                                    <li><a href="editar_ClientesPersona.html">Editar Personas</a></li>
-                                    <li><a href="borrar_ClientesPersona.html">Borrar Personas</a></li>
+                                    <li><a href="../clientesPersona/cargar_ClientesPersona.html">Cargar Personas</a></li>
+                                    <li><a href="../clientesPersona/buscar_ClientesPersona.html">Buscar Personas</a></li>
+                                    <li><a href="../clientesPersona/editar_ClientesPersona.html">Editar Personas</a></li>
+                                    <li><a href="../clientesPersona/borrar_ClientesPersona.html">Borrar Personas</a></li>
                                 </ul>
                             </li>
                             
-                            <li><a href="../clientesEmpresa/Home_ClientesEmpresa.html">Empresas</a>
+                            <li><a href="Home_ClientesEmpresa.html" id="selected">Empresas</a>
                                 <ul>
-                                    <li><a href="../clientesEmpresa/cargar_ClientesEmpresa.html">Cargar Empresas</a></li>
-                                    <li><a href="../clientesEmpresa/buscar_ClientesEmpresa.html">Buscar Empresas</a></li>
-                                    <li><a href="../clientesEmpresa/editar_ClientesEmpresa.html">Editar Empresas</a></li>
-                                    <li><a href="../clientesEmpresa/borrar_ClientesEmpresa.html">Borrar Empresas</a></li>
+                                    <li><a href="cargar_ClientesEmpresa.html">Cargar Empresas</a></li>
+                                    <li><a href="buscar_ClientesEmpresa.html">Buscar Empresas</a></li>
+                                    <li><a href="editar_ClientesEmpresa.html">Editar Empresas</a></li>
+                                    <li><a href="borrar_ClientesEmpresa.html">Borrar Empresas</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -84,26 +84,26 @@
             <!-- CONTENEDOR PRINCIPAL -->
             <div class="contenedor__principal">
 
-                <!-- EDITAR PERSONAS -->
-                <div class="container__EditarPersona">
+                <!-- EDITAR EMPRESAS -->
+                <div class="container__EditarEmpresa">
                     
                     
-                    <!-- SELECCIONAR PERSONA -->
-                    <div class="container_SelectorPersona">
+                    <!-- SELECCIONAR EMPRESA -->
+                    <div class="container_SelectorEmpresa">
                         <form>
                            <table>
                                 <tr>
-                                    <td><h2> EDITAR PERSONA </h2>
+                                    <td><h2> EDITAR EMPRESA </h2>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <select name="select__clientePersona">
+                                        <select name="select__clienteEmpresa">
                                             <option value="Prueba" disabled="" selected="true" style="color: black;">
-                                                Seleccione la Persona a Editar
+                                                Seleccione la Empresa a Editar
                                             </option>
                                             <option value="">
-                                            Carlos, Rios - Santos Lugares, Calle javalandia 80081 - 1123654587 - carlos@mail.com
+                                            AguasMedina SRL - 30-1236548-7 -Santos Lugares, Calle javalandia 80081 - 1123654587 - carlos@mail.com
                                             </option>
                                         </select>
                                     </td>
@@ -123,9 +123,9 @@
                             <table>
                                 <tr>
                                     <td>
-                                        <h2>¿Confirma la EDICIÓN de la Persona?</h2>
+                                        <h2>¿Confirma la EDICIÓN de la Empresa?</h2>
                                         <h3>
-                                            Carlos, Rios - Santos Lugares, Calle javalandia 80081 - 1123654587 - carlos@mail.com
+                                            AguasMedina SRL - 30-1236548-7 - Santos Lugares, Calle javalandia 80081 - 1123654587 - carlos@mail.com
                                         </h3>
                                     </td> 
                                 </tr>
@@ -155,14 +155,30 @@
                                 <h2> ACTUALIZAR DATOS </h2>
                             </td>
                             </tr>
-                            <tr><td><input type="text" name="nombre" maxlength="35" value="Carlos, Garcia Moreno">
-                                </td></tr>
-                            <tr><td><input type="text" name="direccion" maxlength="35" value="Aristobulo del Valle 1234">    
-                                </td></tr>
-                            <tr><td><input type="text" name="localidad" maxlength="35" value="Lomas del Mirador">    
-                                </td></tr>
-                            <tr><td><input type="text" name="contacto" maxlength="20" value="(011)1123659874">      
-                                </td></tr>
+                            <tr>
+                                <td><input  type="text" name="razon_social" maxlength="35" placeholder="Razon Social" 
+                                            value="Agua Medina SRL">   
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input  type="text" name="cuit" maxlength="15"  placeholder="CUIT" 
+                                            value="30-12365487-7">                   
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input  type="text" name="direccion" maxlength="35" placeholder="Direccion" 
+                                            value="Aristobulo del Valle 1234">    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input  type="text" name="localidad" maxlength="35" placeholder="Localidad"
+                                            value="Lomas del Mirador">    
+                                </td>
+                            </tr>
+                            <tr><td><input  type="text" name="contacto" maxlength="20" placeholder="Contacto"
+                                            value="(011)1123659874">      
+                                </td>
+                            </tr>
                             <tr><td>
                                     <select name="tipo_servicio">
                                         <option disabled="">Seleccione un Tipo de Servicio</option>
@@ -172,18 +188,42 @@
                                     </select>
                                 </td>
                             </tr>
-                            <tr><td><input type="number" min="0" max="1000" name="bidones" value="4">   </td></tr>
-                            <tr><td><input type="number" min="0" max="1000" name="maquinas" value="2"> </td></tr>
-                            <tr><td><input type="number" min="0" max="10000000" name="precio" value="1000">  </td></tr>
+                            <tr>
+                                <td><input  type="number" min="0" max="1000" name="bidones" placeholder="Bidones"
+                                            value="4">   
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input  type="number" min="0" max="1000" name="maquinas" placeholder="Maquinas"
+                                            value="2"> 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="number" min="0" max="10000000" name="precio" placeholder="Precio ($)"
+                                    value="1000">  
+                                </td>
+                            </tr>
                             <tr><td>
                                     <select name="idRecorrido">
                                         <option disabled="">Seleccione un Recorrido</option>
                                         <option selected="true"> Opcion de Recorrido Prueba Maqueta Html</option>");
                                     </select>
                                 </td></tr>
-                            <tr><td><input type="text" maxlength="50" name="mail" value="mail_a_editar@gmail.com">                 </td></tr>
-                            <tr><td><input type="text" maxlength="10" name="fecha_alta" value="19-07-2022">     </td></tr>
-                            <tr><td><input type="text" maxlength="35" name="detalles" value="Detalles de Personas a Editar">         </td></tr>
+                            <tr>
+                                <td><input  type="text" maxlength="50" name="mail" placeholder="direcion_mail@mail.com"
+                                            value="mail_a_editar@gmail.com">                 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input  type="text" maxlength="10" name="fecha_alta" placeholder="Fecha Alta"
+                                            value="19-07-2022">     
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input  type="text" maxlength="35" name="detalles" placeholder="Detalles" 
+                                            value="Detalles de Personas a Editar">         
+                                </td>
+                            </tr>
                             <tr>
                                 <td><input  type="reset" 
                                             value="RESET" 
@@ -195,7 +235,6 @@
                                                     color: white;
                                                     margin-top: 15px;
                                                     margin-bottom: 15px;
-                                                    
                                                     font-weight: bolder;"/>  
                                 
                                 <input  type="submit" 
@@ -220,4 +259,3 @@
         </main>
     </body>
 </html>
-

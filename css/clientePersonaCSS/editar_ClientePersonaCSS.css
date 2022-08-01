@@ -238,7 +238,7 @@ main{
 }
 
 .container__EditarPersona table tr td select option{
-    font-size: 18px; 
+    font-size: 20px; 
     font-weight: 600;
 }
 
@@ -403,7 +403,7 @@ main{
 }
 
 .formulario_EditarPersona table tr td select option{
-    font-size: 16px; 
+    font-size: 18px; 
     font-weight: 600;
 }
 /*---------------------------------------- ELEMENTOS RESPONSIVOS ----------------------------------------*/

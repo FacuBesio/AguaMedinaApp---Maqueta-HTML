@@ -5,11 +5,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>AguaMedina App - Empresas</title>
+        <title>AguaMedina App - Buscar Empresa</title>
         <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
     
         <!-- CSS -->
-        <link rel="stylesheet" href="../../css/clienteEmpresaCSS/Home_ClienteEmpresaCSS.css">
+        <link rel="stylesheet" href="../../css/clienteEmpresaCSS/buscar_ClienteEmpresaCSS.css">
     
         <!-- GoogleFonts -->
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,
@@ -84,33 +84,69 @@
             <!-- CONTENEDOR PRINCIPAL -->
             <div class="contenedor__principal">
 
-                <!-- CLIENTES EMPRESA -->
-                <div class="container__main_ClientesEmpresa">
-                    <table>
-                        
-                        <tr><td><a href="buscar_ClientesPersona.jsp?buscarDia=Lunes">Lunes</a></td></tr>
-                        <tr><td><h4> Empresas: - Bidones: - Maquinas: </h4></td></tr>
-                        
-                        <tr><td><a href="buscar_ClientesPersona.jsp?buscarDia=Martes">Martes</a></td></tr>
-                        <tr><td><h4> Empresas: - Bidones: - Maquinas: </h4></td></tr>
-    
-                        <tr><td><a href="buscar_ClientesPersona.jsp?buscarDia=Miercoles">Miercoles</a></td></tr>
-                        <tr><td><h4> Empresas: - Bidones: - Maquinas: </h4></td></tr>
-    
-                        <tr><td><a href="buscar_ClientesPersona.jsp?buscarDia=Jueves">Jueves</a></td></tr>
-                        <tr><td><h4> Empresas: - Bidones: - Maquinas: </h4></td></tr>
-    
-                        <tr><td><a href="buscar_ClientesPersona.jsp?buscarDia=Viernes">Viernes</a></td></tr>
-                        <tr><td><h4> Empresas: - Bidones: - Maquinas: </h4></td></tr>
-    
-                        <tr><td><a href="buscar_ClientesPersona.jsp?buscarDia=Sabados">Sabados</a></td></tr>
-                        <tr><td><h4> Empresas: - Bidones: - Maquinas: </h4></td></tr>
-                        
-                        <tr><td><h3>TOTAL EMPRESAS:</h3></td></tr>
-                        <tr><td><h2 style="color: rgb(159, 197, 58);">BIDONES: </h2></td></tr>
-                        <tr><td><h2 style="color: rgb(159, 197, 58);">MAQUINAS: </h2></td></tr>
-                        
-                    </table>
+                <!-- BUSCADOR -->
+                <div class="container__Buscador">
+                    
+                    <!-- SELECCIONAR FILTRO -->
+                    <div class="container_Selector_filtro">
+                        <form>
+                            <table>
+                                <tr>
+                                    <td><h2> BUSCAR EMPRESA </h2>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <select name="filtro">
+                                            <option value="Prueba" disabled="" selected="true">
+                                                Seleccione un Filtro
+                                            </option>
+                                            <option value="Razon Social" >Razon Social </option>
+                                            <option value="Cuit" >Cuit </option>
+                                            <option value="Direccion">Dirección     </option>
+                                            <option value="Localidad">Localidad     </option>
+                                            <option value="Servicio">Servicio       </option>
+                                            <option value="Recorrido">Recorrido     </option> 
+                                            <option value="Dia">Día                 </option> 
+                                        </select>
+                                    </td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td><input  type="submit" value="SELECCIONAR"/>            
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                    
+                    <!-- FILTRO -->
+                    <div class="container_Filtro">
+                        <form>
+                            <table>
+                                
+                                <!-- DIA -->
+                                <tr><td><h2>DIA</h2></td></tr>
+                                <tr>
+                                    <td>
+                                        <select name="buscarDia">
+                                        <option disabled="" selected="true"> Seleccione Día</option>
+                                        <option>Lunes</option>
+                                        <option>Martes</option>
+                                        <option>Miercoles</option>
+                                        <option>Jueves</option>
+                                        <option>Vierenes</option>
+                                        <option>Sábados</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input  type="submit" value="SELECCIONAR"/>            
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
                 </div>
                     
                 <!-- TABLA -->

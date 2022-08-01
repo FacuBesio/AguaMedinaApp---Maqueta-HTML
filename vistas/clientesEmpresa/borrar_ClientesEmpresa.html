@@ -5,11 +5,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>AguaMedina App - Empresas</title>
+        <title>AguaMedina App - Borrar Empresas</title>
         <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
     
         <!-- CSS -->
-        <link rel="stylesheet" href="../../css/clienteEmpresaCSS/Home_ClienteEmpresaCSS.css">
+        <link rel="stylesheet" href="../../css/clienteEmpresaCSS/borrar_ClienteEmpresaCSS.css">
     
         <!-- GoogleFonts -->
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,
@@ -84,33 +84,66 @@
             <!-- CONTENEDOR PRINCIPAL -->
             <div class="contenedor__principal">
 
-                <!-- CLIENTES EMPRESA -->
-                <div class="container__main_ClientesEmpresa">
-                    <table>
-                        
-                        <tr><td><a href="buscar_ClientesPersona.jsp?buscarDia=Lunes">Lunes</a></td></tr>
-                        <tr><td><h4> Empresas: - Bidones: - Maquinas: </h4></td></tr>
-                        
-                        <tr><td><a href="buscar_ClientesPersona.jsp?buscarDia=Martes">Martes</a></td></tr>
-                        <tr><td><h4> Empresas: - Bidones: - Maquinas: </h4></td></tr>
-    
-                        <tr><td><a href="buscar_ClientesPersona.jsp?buscarDia=Miercoles">Miercoles</a></td></tr>
-                        <tr><td><h4> Empresas: - Bidones: - Maquinas: </h4></td></tr>
-    
-                        <tr><td><a href="buscar_ClientesPersona.jsp?buscarDia=Jueves">Jueves</a></td></tr>
-                        <tr><td><h4> Empresas: - Bidones: - Maquinas: </h4></td></tr>
-    
-                        <tr><td><a href="buscar_ClientesPersona.jsp?buscarDia=Viernes">Viernes</a></td></tr>
-                        <tr><td><h4> Empresas: - Bidones: - Maquinas: </h4></td></tr>
-    
-                        <tr><td><a href="buscar_ClientesPersona.jsp?buscarDia=Sabados">Sabados</a></td></tr>
-                        <tr><td><h4> Empresas: - Bidones: - Maquinas: </h4></td></tr>
-                        
-                        <tr><td><h3>TOTAL EMPRESAS:</h3></td></tr>
-                        <tr><td><h2 style="color: rgb(159, 197, 58);">BIDONES: </h2></td></tr>
-                        <tr><td><h2 style="color: rgb(159, 197, 58);">MAQUINAS: </h2></td></tr>
-                        
-                    </table>
+                <!-- BORRAR EMPRESAS -->
+                <div class="container__BorrarEmpresa">
+                    
+                    <!-- SELECCIONAR EMPRESA -->
+                    <div class="container_SelectorEmpresa">
+                        <form>
+                            <table>
+                                <tr>
+                                    <td><h2> BORRAR EMPRESA </h2>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <select name="select__clienteEmpresa">
+                                            <option value="Prueba" disabled="" selected="true" style="color: black;">
+                                                Seleccione la Empresa a Borrar
+                                            </option>
+                                            <option value="">
+                                            Carlos, Rios - Santos Lugares, Calle javalandia 80081 - 1123654587 - carlos@mail.com
+                                            </option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="submit" value="BORRAR"/> 
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                    
+                    <!-- CONFIRMACION -->
+                    <div class="container_Confirmacion">
+                        <form>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <h2>¿Confirma la ELIMINACIÓN de la Empresa?</h2>
+                                        <h3>
+                                            AguasMedina SRL - 30-1236548-7 - Santos Lugares, Calle javalandia 80081 - 1123654587 - carlos@mail.com
+                                        </h3>
+                                    </td> 
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <select name="select__confirmacion">
+                                                                <option value="false">No</option>
+                                                                <option value="true">Si</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="submit" value="OK"/> 
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
                 </div>
                     
                 <!-- TABLA -->

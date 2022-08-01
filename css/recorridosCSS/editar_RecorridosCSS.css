@@ -240,7 +240,7 @@ main{
 }
 
 .container__EditarRecorrido table tr td select option{
-    font-size: 18px; 
+    font-size: 20px; 
     font-weight: 600;
 }
 

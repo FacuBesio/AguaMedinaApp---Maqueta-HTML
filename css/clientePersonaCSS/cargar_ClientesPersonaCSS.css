@@ -481,3 +481,17 @@ main{
     }
 
 }
+
+@media screen and (max-width: 350px){
+
+    .container__cargarPersona table tr td h3{
+        *padding: 2% 2px;
+        font-size: 18px;
+        *background-color: plum;
+    }
+
+    .container__cargarPersona table tr td h2{
+        font-size: 22px;
+        *background-color: plum;
+    }
+}

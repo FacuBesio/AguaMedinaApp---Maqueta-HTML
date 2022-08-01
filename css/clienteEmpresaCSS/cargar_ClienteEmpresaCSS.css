@@ -1,144 +1,145 @@
-
-* { padding: 0px;
-    margin: 0px;
+*{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: 'Source Sans Pro', sans-serif;
     text-decoration: none;
-    /*list-style: none;*/
 }
 
+
+/*---------------------------------------- HEADER ----------------------------------------*/
 header{
     width: 100%;
-    position: fixed;
+    *position: fixed; /* para que se mantenga por encima de todo*/
     top: 0;
     left: 0;
-    background:#ffff ;
+    background: #fff;
 }
 
-.header__superior {
-    max-width: 1400px;
+/* HEADER SUPERIOR */
+.header__superior{
+    
     margin: auto;
-    margin-left: -10px;
-    margin-top: -16px;
-    margin-bottom: 0%;
-    display: flex; /*indica que se puede poner el Logo de un lado y el input de otro*/
-    align-items: center;
+    display: flex;
+    align-items: center; /*horizontal*/
     justify-content: space-between;
-    padding: 20px;
-
+    padding: 10px 0.7em;
 }
 
-.search img{
-    width: 20%; /*250 px*/
-    margin-left: 85%;
-    padding: 0px;
-} 
+.logo img{
+    width: 100px;
+    *margin-left: -10%;
+}
 
-/*
+.search h1{
+    margin-top: 14%;
+    font-size: 42px;
+    *background-color: plum;
+}
+
 .search input{
     width: 300px;
     padding: 10px;
 }
-*/
-/* BARRA MENU*/
+
+/* BARRA MENU */
 .container__menu{
-    width: 100%; /*Para que ocupe todo el Ancho*/
-    height: 70px; /*Alto de la Barra de Menú*/
-    background: rgb(0, 147, 180);
-    padding: 0px 0px; /*arriba-abajo, izquerda-derecha*/
-    margin-top: -20px;
+    width: 100%;
+    height: 70px;
+    padding: 0px 1.25em;
+    *background: #023877;
+    *background-color: #0074c7;
+    *background-color: rgb(122,198,224);
+    background-color: rgb(0, 147, 180);
 }
 
 .menu{
-    max-width: 1400px;
-    margin:auto;
-    height: 100%; /*Se declara el 100% para despues poder posiconar respescto al tamaño del contenedor.*/
-    margin-left: 0px;
+    height: 100%;
+    margin: auto;
 }
 
-nav {
+nav{
     height: 100%;
 }
 
-nav > ul {              /* Representa al Menu, afecta solamente a los ul que derivan directamente de <nav>*/
+nav > ul{
     height: 100%;
-    display: flex;      /*pone un elemento al lado del otro*/
-
+    display: flex;
 }
 
-nav  ul  li{              /* Representa los SubMenu*/
+nav ul li{
     height: 100%;
-    list-style: none;      
+    list-style: none;
     position: relative;
-    
 }
 
-nav > ul > li:first-child > a{  
+nav > ul > li:first-child > a{
     background-image: url(../../imagenes/home.png);
     background-size: 24px;
     background-repeat: no-repeat;
     background-position: center center;
     padding: 20px 40px;
+    border-radius: 0.1em;
 }
 
-nav > ul > li:first-child:hover > a{  
+nav > ul > li:first-child:hover > a{
     background-image: url(../../imagenes/home.png);
     background-size: 24px;
     background-repeat: no-repeat;
     background-position: center center;
 }
 
-
-nav > ul > li > a{              /* Representa los SubMenu*/
+nav > ul > li > a{
     width: 100%;
     height: 100%;
+    padding: 30px;
     display: flex;
     align-items: center;
-    padding: 14px;
-    color: aliceblue;
     text-transform: uppercase;
-    font-size: 14px;
-    transition: all 100ms ease;
-    
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 200ms ease;
+    color: #fff;
 }
 
-nav > ul > li > a:hover{ 
-    transform: scale(1.1); /*Agranda levemente la opcion cuando se pasa el mouse*/
+nav > ul > li > a:hover{
+    transform: scale(1.1);
+    *background: #0074c7;
     background: rgb(220, 150, 20);
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+    border-radius: 0.5em;
 }
 
-#selected {
-    transform: scale(1.1); 
-    *background-color: rgb(183, 206, 53);
+#selected{
+    transform: scale(1.1);
+    *background-color: #0074c7;
     background-color: rgb(230, 130, 20);
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    *background-color: rgb(122,198,224);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+    border-radius: 0.5em;
+}
 
-}/*A medida que se vata cambiando de Página hay que ir cambiando el 'selected'*/
-
-/* BARRA SUBMENU (Cargar - Editar - etc)*/
-
+/* SUBMENU */
 nav ul li ul{
     width: 200px;
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    position: absolute;
     top: 90px;
     left: -5px;
     padding: 14px 0px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
     visibility: hidden;
     opacity: 0;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-    z-index: 10; /*para que se mantenga arraiba de todo*/
-    transition: all 100ms ease;
+    background: #fff;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+    z-index: 10; /*Para que se ponga encima de cualquier contenido*/
+    transition: all 200ms ease;
 }
 
 nav ul li:hover ul{
     visibility: visible;
-    opacity: 1; /*para que se vea*/
+    opacity: 1;
     top: 70px;
-
 }
 
 nav ul li ul:before{
@@ -154,129 +155,163 @@ nav ul li ul:before{
 }
 
 nav ul li ul li a{
-    display: block;
-    color: rgb(0, 147, 180);
-    padding: 6px;
-    padding-left: 14px;
     margin-top: 10px;
-    font-size: 14px;
-    text-transform: capitalize;
-    transition: all 100ms ease;
+    margin-left: 5px;
+    padding-left: 14px;
+    padding: 6px;
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all 200ms ease;
+    color: #0099E9;
+    *background-color: plum;
 }
 
 nav ul li ul li a:hover{
+    *background: #0074C7;
     background-color: rgb(159, 197, 58);
-    /*background: rgb(228, 181, 93);*/
-    transform:scale(1.2);
-    color: #ffff;
-    padding-left: 20px;
+    color: #fff;
+    transform: scale(1.1);
+    padding-left: 25px;
     font-size: 14px;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
+    font-weight: 600;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
 }
 
-/*MAIN CARGAR PERSONAS*/
-.container__main_CargarPersona{
-    width: 430px;
-    height: 558px;
-    margin-left: 0px;
-    padding-top: 0px;
-    padding-left: 10px;
+
+
+/*---------------------------------------- MAIN ----------------------------------------*/
+main{
+    *background: #f0f0f0;
+    margin: 1em 1.25em;
+    padding: 0px 0px;
+    height: auto;
+    *background: plum;
+}
+
+.contenedor__principal {
+    border-radius: 0.5em;
+    display: flex;
+    gap: 1em;
+    max-height: 700px;
+    *background: plum;
+}
+
+/* ----- CARGAR EMPRESAS -----*/
+.container__cargarEmpresa{
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+    width: 35%;
+    border-radius: 0.5em;
     align-items: center;
-    text-align: left;
+    text-align: center;
     color: white;
+    *background-color:aquamarine;
+    *background-color: rgb(0, 147, 180);
+    background-color: rgb(85, 168, 196);
+}
+
+.container__cargarEmpresa form{
+    width: 100%;
+    height: 100%;
+    *background-color: coral;
+}
+
+.container__cargarEmpresa table{
+    width: 100%;
+    height: 100%;
+    *background-color: orange;
+    
+}
+
+.container__cargarEmpresa table tr td h2{
+    padding-top: 10px;
+    font-size: 24px;
+    font-weight: 800;
+    *padding-bottom: 5px;
     *background-color: plum;
-    background-color: rgb(0, 147, 180);
 }
 
-
-.container__main_CargarPersona td {
-    font-size: 16px;
-    margin-right: 10px;
-    *font-style: italic;
-    font-weight: bolder;
-    
-}
-
-.container__main_CargarPersona input{
-    width: 298px;
-    height: 30px;
-    padding: 7px;
-    margin: 0.5px 5px;
-    font-size: 18px;
-    *font-weight: bolder;
-    *background-color: plum;
-}
-.container__main_CargarPersona select{
-    
-    width: 298px; 
-    padding: 5px; 
-    font-weight: bolder;
-    margin: 1px 5px;
-    *font-size: 18px;
-    
-}
-
-.container__main_CargarPersona h2 {
-    width: 100%; 
-    text-align: center; 
+.container__cargarEmpresa table tr td h3{
+    padding: 2% 2px;
     font-size: 20px;
-    margin-bottom: 0px;
-    font-weight: bolder;
-    margin-left: -5px;
-    
+    *background-color: plum;
 }
 
-.container__main_CargarPersona h3 {
-    width: 100%; 
-    text-align: center; 
+
+.container__cargarEmpresa table tr td a{
     color: white;
-    font-size: 16px;
-    *font-style: italic;
+    text-transform: uppercase;
     font-weight: bolder;
-    margin-left: -5px;
-    
-}
-
-.container__main_CargarPersona p{
-    margin-top: 20px;
     font-size: 18px;
-    font-weight: 300;
-}
-
-.container__main_CargarPersona table tr td select option{
-    font-size: 18px; 
+    *background-color: aquamarine;
+    text-decoration: underline;
     
 }
 
+.container__cargarEmpresa table tr td input{
+    width: 85%;
+    padding: 6px;
+    margin-top: 3px;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 600;
+    *font-weight: bolder;
+    *background-color: aquamarine;
+    border-radius: 0.5em;
+    border-color: #f0f0f0;
+}
 
-/* TABLA CARGAR PERSONAS*/
-.tabla_CargarPersonas{
-    width: 1010px;
-    height: 558px;
-    margin-left: 430px;
-    margin-top: -558px;
+
+
+.container__cargarEmpresa table tr td select{
+    width: 85%;
+    padding: 6px;
+    margin-top: 3px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 16px;
+    border-radius: 0.5em;
+    border-color: #f0f0f0;
+}
+
+.container__cargarEmpresa table tr td select option{
+    font-size: 16px; 
+    font-weight: 600;
+}
+
+/* ----- TABLA -----*/
+.tabla_ClientesEmpresa{
+    width: 80%;
+    *height: auto;
     background-color: white;
     *background-color: coral;
     overflow-y: scroll;
     overflow-x: scroll;
-    padding-top: 5px;
-
 }
 
-.tabla_CargarPersonas table{
-    width: 2550px;
-    *height: 490px;
-    color: rgb(0, 147, 180);
-    text-align: center;
-    background-color: white;
-    *background-color: coral;
-    padding: 5px 5px; /*arriba-abajo, izquerda-derecha*/
-    padding-right: 2px;
-    margin-top: 0;
+.tabla_ClientesEmpresa::-webkit-scrollbar{
+    width: 7px;
+    height: 7px;
+}
+
+.tabla_ClientesEmpresa::-webkit-scrollbar-thumb{
+    background-color: rgb(159, 186, 196);
+    border-radius: 0.5em;
     
 }
 
-.tabla_CargarPersonas table tr th{
+.tabla_ClientesEmpresa table{
+    width: 2400px;
+    color: rgb(0, 147, 180);
+    text-align: center;
+    background: #f0f0f0;
+    *background-color: coral;
+    padding: 15px 10px;
+    border-radius: 0.5em;
+}
+
+.tabla_ClientesEmpresa table tr th{
     text-transform: uppercase;
     text-align: center;
     font-weight: bolder;
@@ -285,17 +320,175 @@ nav ul li ul li a:hover{
     *padding: 5px;
     margin-top: 0;
     color:rgb(159, 197, 58);
- 
 }
 
-.tabla_CargarPersonas table tr td{
+.tabla_ClientesEmpresa table tr td{
     text-transform: capitalize;
     text-align: center;
     padding: 4px 0px;
-    
 }
 
 
 
+/*---------------------------------------- ELEMENTOS RESPONSIVOS ----------------------------------------*/
+.icon__menu{
+    width: 26px;
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+    height: 100%;
+    align-items: center;
+    display: none;
+}
 
+#label__check{
+    width: 26px;
+    height: 100%;
+    display: none;
+}
 
+#check__menu{
+    display: none;
+}
+
+@media screen and (max-width: 1050px){
+
+    .container__cargarEmpresa h3{
+        font-size: 16px;
+        *background-color: plum;
+    
+    }
+    
+    .container__cargarEmpresa table tr td input{
+        font-size: 14px;
+        *background-color: plum;
+    }
+
+    .container__cargarEmpresa table tr td select{
+        font-size: 14px;
+        *background-color: plum;
+    }
+
+    .container__cargarEmpresa table tr td select option{
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (max-width: 800px){
+
+    /* ----- HEADER RESPONSIVE -----*/
+    .menu{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .search input{
+        display: none;
+    }
+
+    .search h1{
+        margin-top: 14%;
+        font-size: 20px;
+        *background-color: plum;
+    }
+    
+    .header__superior{
+        padding: 10px;
+    }
+
+    .logo img{
+        width: 50px;
+    }
+
+    #selected{
+        transform: scale(1);
+    }
+
+    #label__check{
+        display: block;
+    }
+
+    .icon__menu{
+        display: flex;
+    }
+
+    #check__menu:checked ~ nav > ul{
+        height: 300px;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    nav > ul {
+        width: 100%;
+        height: 0px;
+        flex-direction: column;
+        *background-color: #023877;
+        background-color: rgb(0, 147, 180);
+        position: fixed;
+        left: 0;
+        top: 147px;
+        transition: all 200ms ease;
+        z-index: 100;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    nav > ul > li > a:hover{
+        transform: scale(1);
+    }
+
+    nav ul li ul{
+        left: 90px;
+    }
+
+    nav > ul > li:hover > ul{
+        top: 50px;
+    }
+
+    nav > ul > li:first-child a{
+        background-position: 20px;
+    }
+
+    /* ----- MAIN RESPONSIVE -----*/
+    
+    /* CARGAR EMPRESA */
+    .container__cargarEmpresa{
+        width: 100%;
+        *background: plum;
+    }
+    
+    .contenedor__principal {
+        display: flex;
+        flex-direction: column;
+        max-height: 1150px;
+    }
+   
+    .container__cargarEmpresa h3{
+        font-size: 20px;
+    }
+
+    .tabla_ClientesEmpresa{
+        width: 100%;
+    }
+
+   .tabla_ClientesEmpresa table{
+        padding: 10px; 
+    }
+
+}
+
+@media screen and (max-width: 350px){
+
+    .container__cargarEmpresa table tr td h3{
+        *padding: 2% 2px;
+        font-size: 18px;
+        *background-color: plum;
+    }
+
+    .container__cargarEmpresa table tr td h2{
+        font-size: 22px;
+        *background-color: plum;
+    }
+}
